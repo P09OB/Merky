@@ -1,9 +1,9 @@
-.rate__starContainer{
-    border-radius: 8px;
-    width: 327px; 
-    padding: 1em;
+.doneRoute-screen{
+    font-family: Nunito;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: #211C70; 
+
+    h1{
+        font-size: 28px;
+    }
 }
