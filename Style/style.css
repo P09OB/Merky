@@ -548,6 +548,203 @@
   font-size: 14px;
 }
 
+.product-card {
+  width: 98px;
+  min-height: 133px;
+  background-color: #fd9c89;
+  border-radius: 8px;
+  font-family: Nunito;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-card__footer {
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #211C70;
+}
+
+.product-card__footer h1 {
+  font-size: 12px;
+  margin: 0;
+}
+
+.product-card__footer span {
+  font-size: 8px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.route {
+  margin: 0;
+  padding: 0;
+  width: 224px;
+  height: 164px;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.route:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.route:before {
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+.route:active {
+  top: 2px;
+}
+
+.route:before {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 140%;
+  width: 60px;
+}
+
+.route__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.route__img {
+  width: 100px;
+  height: 129px;
+  background-color: #FFDBB0;
+}
+
+.route__img img {
+  width: 100%;
+  height: auto;
+}
+
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .route__img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+  }
+}
+
+.route__info {
+  padding: 0;
+  margin: 0;
+  width: 124px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.route__info h1 {
+  font-family: nunito;
+  font-size: 25px;
+  margin-left: 8px;
+  color: #211C70;
+}
+
+.route__info h2 {
+  font-family: nunito;
+  margin-left: 8px;
+  font-size: 16px;
+  color: #211C70;
+}
+
+.route .button__popup--checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 224px;
+  height: 35px;
+  background-color: #FFA235;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 0;
+}
+
+.route .button__popup--checkbox:hover {
+  background: #e69941;
+}
+
+.route .button__popup--checkbox:active {
+  background: #e69941;
+}
+
+.route .button__popup--checkbox input {
+  height: 16px;
+  width: 16px;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  outline: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background-color: #F9F9F9;
+  border: 1px solid #FFA235;
+  cursor: pointer;
+}
+
+.route .button__popup--checkbox input:checked {
+  border: 1px solid #FFA235;
+  background-color: #FFA235;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
