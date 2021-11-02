@@ -97,6 +97,18 @@
   background-color: #FFA235;
 }
 
+.button--list {
+  width: 38px;
+  height: 38px;
+  background-color: #E5E5E5;
+}
+
+.button--nullList {
+  width: 38px;
+  height: 38px;
+  background-color: #F9F9F9;
+}
+
 .input {
   border: none;
   border-radius: 8px;
@@ -292,6 +304,59 @@
   color: #ffffff;
   background: #211c70;
   border-radius: 0px 0px 8px 8px;
+}
+
+.statusBar {
+  font-family: "Nunito";
+  border-radius: 0px 0px 8px 8px;
+  width: 375px;
+  height: 167px;
+  color: #FFA235;
+  background-color: #F9F9F9;
+}
+
+.statusBar__container {
+  padding: 16px;
+  margin: 0 9px;
+}
+
+.statusBar__navSection {
+  margin-top: 44px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.statusBar__nameSection {
+  font-size: 18px;
+  text-align: center;
+}
+
+.statusBar__seaSection {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.statusBar__listButton {
+  width: 38px;
+  height: 38px;
+  background: #F2F2F2;
+  border-radius: 8px;
 }
 
 .card__time {
@@ -838,6 +903,76 @@
   font-size: 28px;
 }
 
+<<<<<<< HEAD
+=======
+header h1 {
+  font-size: 18px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: #FFA235;
+  margin-top: 24px;
+  margin-bottom: 9px;
+  padding: 0;
+}
+
+header p {
+  font-size: 12px;
+  font-family: "Nunito";
+  text-align: center;
+  color: #211c70;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  padding: 0;
+}
+
+header p strong {
+  font-weight: bold;
+}
+
+.myProducts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myProducts__container .cardProduct {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.myProducts__container .cardNewProduct {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.navBar__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: fixed;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+>>>>>>> c6116790976c91e25ef1b07ce2d991edb916e993
 body {
   margin: 0;
   padding: 0;

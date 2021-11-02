@@ -22,4 +22,18 @@
 
         }
     }
+
+    &--list {
+
+        width: 38px;
+        height: 38px;
+        background-color: #E5E5E5;
+
+    }
+
+    &--nullList {
+        width: 38px;
+        height: 38px;
+        background-color: #F9F9F9;
+    }
 }
