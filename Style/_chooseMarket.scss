@@ -1,0 +1,67 @@
+.chooseMarket{
+    width: 375px;
+    height: 812px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F3F3F3;
+
+    &__header{
+
+        background-color:#FFFFFF;
+        box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+        border-radius: 8px;
+        padding: 20px;
+
+    }
+
+    &__info{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title{
+        margin: 0;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        color: #FFA235;
+    }
+
+    &__text{
+        margin: 0;
+        font-family: Nunito;
+        font-style: normal;
+        font-size: 12px;
+        color: #211C70;
+    }
+
+    &__containerSelect{
+
+        display: flex;
+        margin-top: 10px;
+    }
+
+    &__margin{
+
+        margin-left: 15px;
+    }
+
+    &__content{
+
+        margin-top: 20px;
+    }
+
+    &__market{
+        margin-top: 20px;
+       
+    }
+
+    &__paddingCard{
+
+        padding: 8px;
+    }
+}
