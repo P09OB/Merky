@@ -17,6 +17,15 @@
   font-family: "Nunito";
   height: 57px;
   width: 327px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card__list {
@@ -26,7 +35,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 16px;
 }
 
 .card__list input {
@@ -68,9 +76,16 @@
 }
 
 .card__list--add {
-  padding-left: 22px;
-  padding-top: 20px;
   display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card__list--add button {
@@ -906,10 +921,21 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .doneRoute-screen h1 {
   font-size: 28px;
+}
+
+.doneRoute-screen h3 {
+  font-size: 16px;
+}
+
+.doneRoute-screen h4 {
+  font-size: 14px;
 }
 
 header h1 {
@@ -1069,5 +1095,15 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1em;
+}
+
+.reset-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 /*# sourceMappingURL=style.css.map */

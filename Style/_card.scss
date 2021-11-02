@@ -5,11 +5,14 @@
   font-family: "Nunito";
   height: 57px;
   width: 327px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__list {
     display: flex;
     align-items: center;
-    padding-left: 16px;
+    
     input {
       height: 16px;
       width: 16px;
@@ -38,6 +41,7 @@
   }
 
   label {
+    
     font-weight: bold;
     font-size: 16;
     color: var(--main-color);
@@ -46,9 +50,10 @@
   }
 
   &__list--add {
-    padding-left: 22px;
-    padding-top: 20px;
     display: block;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 
     button {
       background: url("../images/plus.svg") no-repeat scroll 0 0 transparent;
