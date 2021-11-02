@@ -2,8 +2,14 @@
     font-family: Nunito;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
     h1{
         font-size: 28px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    h4{
+        font-size: 14px;
     }
 }
