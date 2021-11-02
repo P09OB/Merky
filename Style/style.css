@@ -952,15 +952,6 @@ header p strong {
   margin-bottom: 8px;
 }
 
-.button--inactive {
-  position: fixed;
-  left: 50%;
-  bottom: 80px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  margin: 0 auto;
-}
-
 .navBar__container {
   display: -webkit-box;
   display: -ms-flexbox;
