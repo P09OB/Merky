@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+:root {
+  --main-color: #211c70;
+  --second-color: #ffa235;
+  --main-background: #f9f9f9;
+  --second-background:#ffffff ;
+  --box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  --border-radius: 8px;
+}
+
 .card {
   background: #f9f9f9;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-  border-radius: 8px;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   font-family: "Nunito";
   height: 57px;
   width: 327px;
@@ -32,14 +41,14 @@
   outline: none;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
-  background-color: #f9f9f9;
-  border: 1px solid #ffa235;
+  background-color: var(--main-background);
+  border: 1px solid var(--second-color);
   cursor: pointer;
 }
 
 .card__list input:checked {
-  border: 1px solid #ffa235;
-  background-color: #ffa235;
+  border: 1px solid var(--second-color);
+  background-color: var(--second-color);
 }
 
 .card__list p {
@@ -51,7 +60,7 @@
 .card label {
   font-weight: bold;
   font-size: 16;
-  color: #211c70;
+  color: var(--main-color);
   padding-left: 16px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
@@ -76,7 +85,7 @@
 .button {
   width: 335px;
   height: 44px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   border: none;
   font-family: Open Sans;
   font-style: normal;
@@ -86,15 +95,15 @@
 }
 
 .button--active {
-  background-color: #FFA235;
+  background-color: var(--second-color);
 }
 
 .button--inactive {
-  background-color: #211C70;
+  background-color: var(--main-color);
 }
 
 .button--inactive:hover {
-  background-color: #FFA235;
+  background-color: var(--second-color);
 }
 
 .button--list {
@@ -106,17 +115,17 @@
 .button--nullList {
   width: 38px;
   height: 38px;
-  background-color: #F9F9F9;
+  background-color: var(--main-background);
 }
 
 .input {
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   height: 38px;
   margin: 0;
   padding-left: 30px;
   width: 100%;
-  color: #211c70;
+  color: var(--main-color);
   background: #f2f2f2;
   font-family: Nunito;
   font-style: normal;
@@ -150,7 +159,7 @@
 }
 
 .input__container {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   position: relative;
   background: #ddd;
   direction: ltr;
@@ -184,8 +193,8 @@
   width: 100px;
   height: 38px;
   background-color: #F2F2F2;
-  border-radius: 8px;
-  color: #211C70;
+  border-radius: var(--border-radius);
+  color: var(--main-color);
   padding-left: 8px;
   border: none;
   font-family: Nunito;
@@ -195,10 +204,10 @@
 }
 
 .navBar {
-  background: #f9f9f9;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-  border-radius: 8px;
+  background: var(--main-background);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   font-family: 'Nunito';
   height: 57px;
   width: 327px;
@@ -212,7 +221,7 @@
 
 .navBar__home {
   background: url("../images/Casa.svg") no-repeat scroll 0 0 transparent;
-  border: #F9F9F9;
+  border: var(--main-background);
   cursor: pointer;
   height: 20px;
   padding-bottom: 2px;
@@ -226,7 +235,7 @@
 
 .navBar__list {
   background: url("../images/Lista.svg") no-repeat scroll 0 0 transparent;
-  border: #F9F9F9;
+  border: var(--main-background);
   cursor: pointer;
   height: 20px;
   padding-bottom: 2px;
@@ -240,7 +249,7 @@
 
 .navBar__community {
   background: url("../images/Comunidad.svg") no-repeat scroll 0 0 transparent;
-  border: #F9F9F9;
+  border: var(--main-background);
   cursor: pointer;
   height: 20px;
   padding-bottom: 2px;
@@ -254,7 +263,7 @@
 
 .navBar__profile {
   background: url("../images/Perfil.svg") no-repeat scroll 0 0 transparent;
-  border: #F9F9F9;
+  border: var(--main-background);
   cursor: pointer;
   height: 20px;
   padding-bottom: 2px;
@@ -275,9 +284,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #ffffff;
+  background-color: var(--second-background);
   padding: 16px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .popUp__title {
@@ -287,12 +296,12 @@
   font-size: 20px;
   line-height: 27px;
   text-align: center;
-  color: #211c70;
+  color: var(--main-color);
 }
 
 .popUp__element {
   text-align: center;
-  color: #ffa235;
+  color: var(--second-color);
   margin: 0;
 }
 
@@ -302,7 +311,7 @@
   left: 59px;
   top: 277px;
   color: #ffffff;
-  background: #211c70;
+  background: var(--main-color);
   border-radius: 0px 0px 8px 8px;
 }
 
@@ -311,8 +320,8 @@
   border-radius: 0px 0px 8px 8px;
   width: 375px;
   height: 167px;
-  color: #FFA235;
-  background-color: #F9F9F9;
+  color: var(--second-color);
+  background-color: var(--main-background);
 }
 
 .statusBar__container {
@@ -356,12 +365,12 @@
   width: 38px;
   height: 38px;
   background: #F2F2F2;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .card__time {
   font-family: "Nunito";
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   width: 327px;
   background-color: #E0E0E9;
   padding: 1em;
@@ -375,7 +384,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .card__time h1 {
@@ -386,10 +395,10 @@
 .cardProduct {
   width: 327px;
   height: 92px;
-  background-color: #F9F9F9;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  background-color: var(--main-background);
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
   position: relative;
 }
 
@@ -416,7 +425,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .cardProduct__weight {
@@ -424,7 +433,7 @@
   font-family: Nunito;
   font-style: normal;
   font-size: 12px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .cardProduct__star {
@@ -437,7 +446,7 @@
   font-family: Nunito;
   font-style: normal;
   font-size: 12px;
-  color: #FFA235;
+  color: var(--second-color);
 }
 
 .cardProduct--addLink {
@@ -460,12 +469,12 @@
 }
 
 .cardImg {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   position: relative;
   color: white;
   font-family: Nunito;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .cardImg--title {
@@ -519,9 +528,9 @@
   width: 327px;
   height: 92px;
   background-color: #FFDBB0;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .cardNewProduct__container {
@@ -554,7 +563,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .radioButton {
@@ -565,8 +574,8 @@
           box-sizing: border-box;
   padding: 8px;
   background-color: #F0EFEF;
-  border-radius: 8px;
-  color: #211C70;
+  border-radius: var(--border-radius);
+  color: var(--main-color);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -578,7 +587,7 @@
 }
 
 .radioButton__input:checked ~ .radioButton__checkmark {
-  border: 2px solid #ffa235;
+  border: 2px solid var(--second-color);
 }
 
 .radioButton__input:checked ~ .radioButton__checkmark:after {
@@ -591,7 +600,7 @@
   height: 24px;
   border-radius: 24px;
   background-color: transparent;
-  border: 2px solid #211c70;
+  border: 2px solid var(--main-color);
 }
 
 .radioButton__checkmark:after {
@@ -603,7 +612,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #ffa235;
+  background: var(--second-color);
 }
 
 .radioButton__label {
@@ -616,8 +625,8 @@
 .product-card {
   width: 98px;
   min-height: 133px;
-  background-color: #fd9c89;
-  border-radius: 8px;
+  background-color: var(--second-color);
+  border-radius: var(border-radius);
   font-family: Nunito;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -648,7 +657,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .product-card__footer h1 {
@@ -752,14 +761,14 @@
   font-family: nunito;
   font-size: 25px;
   margin-left: 8px;
-  color: #211c70;
+  color: var(--main-color);
 }
 
 .route__info h2 {
   font-family: nunito;
   margin-left: 8px;
   font-size: 16px;
-  color: #211c70;
+  color: var(--main-color);
 }
 
 .route .button__popup--checkbox {
@@ -774,7 +783,7 @@
           justify-content: center;
   width: 100%;
   height: 35px;
-  background-color: #ffa235;
+  background-color: var(--second-color);
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   padding: 0;
@@ -801,13 +810,13 @@
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   background-color: #f9f9f9;
-  border: 1px solid #ffa235;
+  border: 1px solid var(--second-color);
   cursor: pointer;
 }
 
 .route .button__popup--checkbox input:checked {
-  border: 1px solid #ffa235;
-  background-color: #ffa235;
+  border: 1px solid var(--second-color);
+  background-color: var(--second-color) q;
 }
 
 .route-screen {
@@ -909,7 +918,7 @@ header h1 {
   font-style: normal;
   font-weight: bold;
   text-align: center;
-  color: #FFA235;
+  color: var(--second-color);
   margin-top: 24px;
   margin-bottom: 9px;
   padding: 0;
@@ -919,7 +928,7 @@ header p {
   font-size: 12px;
   font-family: "Nunito";
   text-align: center;
-  color: #211c70;
+  color: var(--main-color);
   margin-top: 9px;
   margin-bottom: 9px;
   padding: 0;
@@ -987,10 +996,10 @@ header p strong {
 }
 
 .chooseMarket__header {
-  background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-  border-radius: 8px;
+  background-color: var(--second-background);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   padding: 20px;
 }
 
@@ -1013,7 +1022,7 @@ header p strong {
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  color: #FFA235;
+  color: var(--second-color);
 }
 
 .chooseMarket__text {
@@ -1021,7 +1030,7 @@ header p strong {
   font-family: Nunito;
   font-style: normal;
   font-size: 12px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .chooseMarket__containerSelect {

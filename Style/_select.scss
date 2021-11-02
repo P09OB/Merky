@@ -2,8 +2,8 @@
     width: 100px;
     height: 38px;
     background-color: #F2F2F2;
-    border-radius: 8px;
-    color: #211C70;
+    border-radius: var(--border-radius);
+    color: var(--main-color);
     padding-left: 8px;
     border: none;
 

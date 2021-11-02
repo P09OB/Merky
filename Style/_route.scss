@@ -79,13 +79,13 @@
       font-family: nunito;
       font-size: 25px;
       margin-left: 8px;
-      color: #211c70;
+      color: var(--main-color);
     }
     h2 {
       font-family: nunito;
       margin-left: 8px;
       font-size: 16px;
-      color: #211c70;
+      color: var(--main-color);
     }
   }
 
@@ -95,7 +95,7 @@
     justify-content: center;
     width: 100%;
     height: 35px;
-    background-color: #ffa235;
+    background-color: var(--second-color);
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     padding: 0;
@@ -118,13 +118,13 @@
       outline: none;
       transition-duration: 0.3s;
       background-color: #f9f9f9;
-      border: 1px solid #ffa235;
+      border: 1px solid var(--second-color);
       cursor: pointer;
     }
 
     input:checked {
-      border: 1px solid #ffa235;
-      background-color: #ffa235;
+      border: 1px solid var(--second-color);
+      background-color: var(--second-color)q;
     }
   }
 }

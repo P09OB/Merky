@@ -1,7 +1,7 @@
 .navBar{
-    background: #f9f9f9;
-    box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-    border-radius: 8px;
+    background: var(--main-background);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
     font-family: 'Nunito';
     height: 57px;
     width: 327px;
@@ -10,7 +10,7 @@
 
     &__home {
         background: url("../images/Casa.svg") no-repeat scroll 0 0 transparent;
-        border: #F9F9F9;
+        border: var(--main-background);
         cursor: pointer;
         height: 20px;
         padding-bottom: 2px;
@@ -23,7 +23,7 @@
 
     &__list {
         background: url("../images/Lista.svg") no-repeat scroll 0 0 transparent;
-            border: #F9F9F9;
+            border: var(--main-background);
             cursor: pointer;
             height: 20px;
             padding-bottom: 2px;
@@ -36,7 +36,7 @@
 
     &__community {
         background: url("../images/Comunidad.svg") no-repeat scroll 0 0 transparent;
-            border: #F9F9F9;
+            border:  var(--main-background);
             cursor: pointer;
             height: 20px;
             padding-bottom: 2px;
@@ -49,7 +49,7 @@
 
     &__profile {
         background: url("../images/Perfil.svg") no-repeat scroll 0 0 transparent;
-            border: #F9F9F9;
+            border:  var(--main-background);
             cursor: pointer;
             height: 20px;
             padding-bottom: 2px;

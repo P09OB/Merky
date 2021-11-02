@@ -1,7 +1,7 @@
 .card {
   background: #f9f9f9;
-  box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   font-family: "Nunito";
   height: 57px;
   width: 327px;
@@ -21,13 +21,13 @@
       border-radius: 4px;
       outline: none;
       transition-duration: 0.3s;
-      background-color: #f9f9f9;
-      border: 1px solid #ffa235;
+      background-color: var(--main-background);
+      border: 1px solid var(--second-color);
       cursor: pointer;
     }
     input:checked {
-      border: 1px solid #ffa235;
-      background-color: #ffa235;
+      border: 1px solid var(--second-color);
+      background-color: var(--second-color);
     }
 
     p {
@@ -40,7 +40,7 @@
   label {
     font-weight: bold;
     font-size: 16;
-    color: #211c70;
+    color: var(--main-color);
     padding-left: 16px;
     min-width: fit-content;
   }
