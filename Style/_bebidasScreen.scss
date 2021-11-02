@@ -1,0 +1,21 @@
+.Section {
+    width: 375px;
+    padding-left: 20px;
+
+    .title {
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 18px;
+        color: #211c70;
+    }
+}
+
+.recomendedContainer {
+    display: flex;
+    overflow-x: scroll;
+
+    .product-card {
+        margin-right: 16px;
+        min-width: 98px;
+    }
+}
