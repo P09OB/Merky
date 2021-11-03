@@ -2,9 +2,9 @@
     width: 258px;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: var(--second-background);
     padding: 16px;
-    border-radius: 8px;
+    border-radius:var(--border-radius);
 
     &__title {
         font-family: "Nunito";
@@ -13,12 +13,12 @@
         font-size: 20px;
         line-height: 27px;
         text-align: center;
-        color: #211c70;
+        color: var(--main-color);
     }
 
     &__element {
         text-align: center;
-        color: #ffa235;
+        color: var(--second-color);
         margin: 0;
     }
 }
@@ -29,6 +29,6 @@
     left: 59px;
     top: 277px;
     color: #ffffff;
-    background: #211c70;
+    background: var(--main-color);
     border-radius: 0px 0px 8px 8px;
 }

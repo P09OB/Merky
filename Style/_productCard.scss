@@ -1,8 +1,8 @@
 .product-card{
     width : 98px;
     min-height : 133px;
-    background-color: #fd9c89;
-    border-radius: 8px;
+    background-color: var(--second-color);
+    border-radius: var(border-radius);
     font-family: Nunito;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
         padding: 8px;
         display: flex;
         flex-direction: column;
-        color: #211C70;
+        color:var(--main-color);
         
         h1{
             font-size: 12px;

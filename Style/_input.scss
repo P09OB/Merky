@@ -1,11 +1,11 @@
 .input{
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     height: 38px;
     margin: 0;
     padding-left: 30px;
     width: 100%;
-    color: #211c70;
+    color: var(--main-color);
 
     background: #f2f2f2;
     font-family: Nunito;
@@ -28,7 +28,7 @@
     }
 
     &__container {
-        border-radius: 8px;
+        border-radius: var(--border-radius);
         position: relative;
         background: #ddd;
         direction: ltr;

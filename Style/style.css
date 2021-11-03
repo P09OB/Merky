@@ -1,13 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+:root {
+  --main-color: #211c70;
+  --second-color: #ffa235;
+  --main-background: #f9f9f9;
+  --second-background:#ffffff ;
+  --box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  --border-radius: 8px;
+}
+
 .card {
   background: #f9f9f9;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-  border-radius: 8px;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   font-family: "Nunito";
   height: 57px;
   width: 327px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card__list {
@@ -17,7 +35,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 16px;
 }
 
 .card__list input {
@@ -32,14 +49,14 @@
   outline: none;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
-  background-color: #f9f9f9;
-  border: 1px solid #ffa235;
+  background-color: var(--main-background);
+  border: 1px solid var(--second-color);
   cursor: pointer;
 }
 
 .card__list input:checked {
-  border: 1px solid #ffa235;
-  background-color: #ffa235;
+  border: 1px solid var(--second-color);
+  background-color: var(--second-color);
 }
 
 .card__list p {
@@ -51,7 +68,7 @@
 .card label {
   font-weight: bold;
   font-size: 16;
-  color: #211c70;
+  color: var(--main-color);
   padding-left: 16px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
@@ -59,9 +76,16 @@
 }
 
 .card__list--add {
-  padding-left: 22px;
-  padding-top: 20px;
   display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card__list--add button {
@@ -73,10 +97,14 @@
   width: 14px;
 }
 
+.card__container {
+  margin-left: 24px;
+}
+
 .button {
   width: 335px;
   height: 44px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   border: none;
   font-family: Open Sans;
   font-style: normal;
@@ -86,25 +114,37 @@
 }
 
 .button--active {
-  background-color: #FFA235;
+  background-color: var(--second-color);
 }
 
 .button--inactive {
-  background-color: #211C70;
+  background-color: var(--main-color);
 }
 
 .button--inactive:hover {
-  background-color: #FFA235;
+  background-color: var(--second-color);
+}
+
+.button--list {
+  width: 38px;
+  height: 38px;
+  background-color: #E5E5E5;
+}
+
+.button--nullList {
+  width: 38px;
+  height: 38px;
+  background-color: var(--main-background);
 }
 
 .input {
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   height: 38px;
   margin: 0;
   padding-left: 30px;
   width: 100%;
-  color: #211c70;
+  color: var(--main-color);
   background: #f2f2f2;
   font-family: Nunito;
   font-style: normal;
@@ -138,7 +178,7 @@
 }
 
 .input__container {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   position: relative;
   background: #ddd;
   direction: ltr;
@@ -172,8 +212,8 @@
   width: 100px;
   height: 38px;
   background-color: #F2F2F2;
-  border-radius: 8px;
-  color: #211C70;
+  border-radius: var(--border-radius);
+  color: var(--main-color);
   padding-left: 8px;
   border: none;
   font-family: Nunito;
@@ -183,10 +223,10 @@
 }
 
 .navBar {
-  background: #f9f9f9;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-  border-radius: 8px;
+  background: var(--main-background);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   font-family: 'Nunito';
   height: 57px;
   width: 327px;
@@ -196,11 +236,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 24px;
+}
+
+.navBar--flotante {
+  position: relative;
+  z-index: 0;
 }
 
 .navBar__home {
   background: url("../images/Casa.svg") no-repeat scroll 0 0 transparent;
-  border: #F9F9F9;
+  border: var(--main-background);
   cursor: pointer;
   height: 20px;
   padding-bottom: 2px;
@@ -214,7 +260,7 @@
 
 .navBar__list {
   background: url("../images/Lista.svg") no-repeat scroll 0 0 transparent;
-  border: #F9F9F9;
+  border: var(--main-background);
   cursor: pointer;
   height: 20px;
   padding-bottom: 2px;
@@ -228,7 +274,7 @@
 
 .navBar__community {
   background: url("../images/Comunidad.svg") no-repeat scroll 0 0 transparent;
-  border: #F9F9F9;
+  border: var(--main-background);
   cursor: pointer;
   height: 20px;
   padding-bottom: 2px;
@@ -242,7 +288,7 @@
 
 .navBar__profile {
   background: url("../images/Perfil.svg") no-repeat scroll 0 0 transparent;
-  border: #F9F9F9;
+  border: var(--main-background);
   cursor: pointer;
   height: 20px;
   padding-bottom: 2px;
@@ -263,9 +309,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #ffffff;
+  background-color: var(--second-background);
   padding: 16px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .popUp__title {
@@ -275,12 +321,12 @@
   font-size: 20px;
   line-height: 27px;
   text-align: center;
-  color: #211c70;
+  color: var(--main-color);
 }
 
 .popUp__element {
   text-align: center;
-  color: #ffa235;
+  color: var(--second-color);
   margin: 0;
 }
 
@@ -290,13 +336,66 @@
   left: 59px;
   top: 277px;
   color: #ffffff;
-  background: #211c70;
+  background: var(--main-color);
   border-radius: 0px 0px 8px 8px;
+}
+
+.statusBar {
+  font-family: "Nunito";
+  border-radius: 0px 0px 8px 8px;
+  width: 375px;
+  height: 167px;
+  color: var(--second-color);
+  background-color: var(--main-background);
+}
+
+.statusBar__container {
+  padding: 16px;
+  margin: 0 9px;
+}
+
+.statusBar__navSection {
+  margin-top: 44px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.statusBar__nameSection {
+  font-size: 18px;
+  text-align: center;
+}
+
+.statusBar__seaSection {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.statusBar__listButton {
+  width: 38px;
+  height: 38px;
+  background: #F2F2F2;
+  border-radius: var(--border-radius);
 }
 
 .card__time {
   font-family: "Nunito";
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   width: 327px;
   background-color: #E0E0E9;
   padding: 1em;
@@ -310,7 +409,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .card__time h1 {
@@ -321,10 +420,10 @@
 .cardProduct {
   width: 327px;
   height: 92px;
-  background-color: #F9F9F9;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  background-color: var(--main-background);
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
   position: relative;
 }
 
@@ -351,7 +450,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .cardProduct__weight {
@@ -359,7 +458,7 @@
   font-family: Nunito;
   font-style: normal;
   font-size: 12px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .cardProduct__star {
@@ -372,7 +471,7 @@
   font-family: Nunito;
   font-style: normal;
   font-size: 12px;
-  color: #FFA235;
+  color: var(--second-color);
 }
 
 .cardProduct--addLink {
@@ -395,12 +494,13 @@
 }
 
 .cardImg {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   position: relative;
   color: white;
   font-family: Nunito;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  margin-bottom: 16px;
 }
 
 .cardImg--title {
@@ -437,8 +537,8 @@
 }
 
 .cardImg__categorylink {
-  background: url("../images/bebidas.png");
-  background-size: contain;
+  background-image: url("../images/bebidas.png");
+  background-size: cover;
   width: 327px;
   height: 92px;
 }
@@ -454,9 +554,9 @@
   width: 327px;
   height: 92px;
   background-color: #FFDBB0;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
-          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .cardNewProduct__container {
@@ -489,7 +589,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .radioButton {
@@ -500,8 +600,8 @@
           box-sizing: border-box;
   padding: 8px;
   background-color: #F0EFEF;
-  border-radius: 8px;
-  color: #211C70;
+  border-radius: var(--border-radius);
+  color: var(--main-color);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -513,7 +613,7 @@
 }
 
 .radioButton__input:checked ~ .radioButton__checkmark {
-  border: 2px solid #ffa235;
+  border: 2px solid var(--second-color);
 }
 
 .radioButton__input:checked ~ .radioButton__checkmark:after {
@@ -526,7 +626,7 @@
   height: 24px;
   border-radius: 24px;
   background-color: transparent;
-  border: 2px solid #211c70;
+  border: 2px solid var(--main-color);
 }
 
 .radioButton__checkmark:after {
@@ -538,7 +638,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #ffa235;
+  background: var(--second-color);
 }
 
 .radioButton__label {
@@ -551,8 +651,8 @@
 .product-card {
   width: 98px;
   min-height: 133px;
-  background-color: #fd9c89;
-  border-radius: 8px;
+  background-color: var(--second-color);
+  border-radius: var(border-radius);
   font-family: Nunito;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,7 +683,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .product-card__footer h1 {
@@ -610,7 +710,7 @@
 }
 
 .route:after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   -webkit-transition: all 0.3s;
@@ -618,7 +718,7 @@
 }
 
 .route:before {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -655,7 +755,7 @@
 .route__img {
   width: 100px;
   height: 129px;
-  background-color: #FFDBB0;
+  background-color: #ffdbb0;
 }
 
 .route__img img {
@@ -687,14 +787,14 @@
   font-family: nunito;
   font-size: 25px;
   margin-left: 8px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .route__info h2 {
   font-family: nunito;
   margin-left: 8px;
   font-size: 16px;
-  color: #211C70;
+  color: var(--main-color);
 }
 
 .route .button__popup--checkbox {
@@ -707,9 +807,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 224px;
+  width: 100%;
   height: 35px;
-  background-color: #FFA235;
+  background-color: var(--second-color);
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   padding: 0;
@@ -735,17 +835,269 @@
   outline: none;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
-  background-color: #F9F9F9;
-  border: 1px solid #FFA235;
+  background-color: #f9f9f9;
+  border: 1px solid var(--second-color);
   cursor: pointer;
 }
 
 .route .button__popup--checkbox input:checked {
-  border: 1px solid #FFA235;
-  background-color: #FFA235;
+  border: 1px solid var(--second-color);
+  background-color: var(--second-color) q;
+}
+
+.route-screen {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../images/map.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.route-screen__main-actions {
+  width: 100%;
+  height: 280px;
+  background-color: rgba(255, 255, 255, 0.747);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.slider-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow: hidden;
+  scrollbar-width: none;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.route-element-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 3.5em;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.products-route-container {
+  position: relative;
+}
+
+.route-element {
+  background-color: white;
+  width: 100% !important;
+}
+
+.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.grabbing .slide img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: 5px 5px 40px -1px var(--shadow);
+          box-shadow: 5px 5px 40px -1px var(--shadow);
+}
+
+.doneRoute-screen {
+  font-family: Nunito;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.doneRoute-screen h1 {
+  font-size: 28px;
+}
+
+.doneRoute-screen h3 {
+  font-size: 16px;
+}
+
+.doneRoute-screen h4 {
+  font-size: 14px;
+}
+
+header h1 {
+  font-size: 18px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: var(--second-color);
+  margin-top: 24px;
+  margin-bottom: 9px;
+  padding: 0;
+}
+
+header p {
+  font-size: 12px;
+  font-family: "Nunito";
+  text-align: center;
+  color: var(--main-color);
+  margin-top: 9px;
+  margin-bottom: 9px;
+  padding: 0;
+}
+
+header p strong {
+  font-weight: bold;
+}
+
+.myProducts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myProducts__container .cardProduct {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.myProducts__container .cardNewProduct {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.navBar__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: fixed;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+.chooseMarket {
+  width: 375px;
+  height: 812px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F3F3F3;
+}
+
+.chooseMarket__header {
+  background-color: var(--second-background);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: 20px;
+}
+
+.chooseMarket__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chooseMarket__title {
+  margin: 0;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--second-color);
+}
+
+.chooseMarket__text {
+  margin: 0;
+  font-family: Nunito;
+  font-style: normal;
+  font-size: 12px;
+  color: var(--main-color);
+}
+
+.chooseMarket__containerSelect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.chooseMarket__margin {
+  margin-left: 15px;
+}
+
+.chooseMarket__content {
+  margin-top: 20px;
+}
+
+.chooseMarket__market {
+  margin-top: 20px;
+}
+
+.chooseMarket__paddingCard {
+  padding: 8px;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -754,5 +1106,26 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1em;
+}
+
+.reset-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 21px;
+  color: #211C70;
 }
 /*# sourceMappingURL=style.css.map */
