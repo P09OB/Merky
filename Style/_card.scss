@@ -1,18 +1,15 @@
 .card {
   background: #f9f9f9;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  border-radius: 8px;
   font-family: "Nunito";
   height: 57px;
   width: 327px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   &__list {
     display: flex;
     align-items: center;
-    
+    padding-left: 16px;
     input {
       height: 16px;
       width: 16px;
@@ -24,13 +21,13 @@
       border-radius: 4px;
       outline: none;
       transition-duration: 0.3s;
-      background-color: var(--main-background);
-      border: 1px solid var(--second-color);
+      background-color: #f9f9f9;
+      border: 1px solid #ffa235;
       cursor: pointer;
     }
     input:checked {
-      border: 1px solid var(--second-color);
-      background-color: var(--second-color);
+      border: 1px solid #ffa235;
+      background-color: #ffa235;
     }
 
     p {
@@ -41,19 +38,17 @@
   }
 
   label {
-    
     font-weight: bold;
     font-size: 16;
-    color: var(--main-color);
+    color: #211c70;
     padding-left: 16px;
     min-width: fit-content;
   }
 
   &__list--add {
+    padding-left: 22px;
+    padding-top: 20px;
     display: block;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
 
     button {
       background: url("../images/plus.svg") no-repeat scroll 0 0 transparent;
@@ -63,15 +58,6 @@
       padding-bottom: 2px;
       width: 14px;
     }
-  }
-
-  &__container{
-
-    margin-left: 24px;
-    height: 500px;
-    overflow: scroll;
-
-      
   }
 
 

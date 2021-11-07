@@ -11,21 +11,12 @@
 
 .card {
   background: #f9f9f9;
-  -webkit-box-shadow: var(--box-shadow);
-          box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
+  -webkit-box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+          box-shadow: 0px 4px 13px rgba(63, 63, 63, 0.25);
+  border-radius: 8px;
   font-family: "Nunito";
   height: 57px;
   width: 327px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .card__list {
@@ -35,6 +26,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 16px;
 }
 
 .card__list input {
@@ -49,14 +41,14 @@
   outline: none;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
-  background-color: var(--main-background);
-  border: 1px solid var(--second-color);
+  background-color: #f9f9f9;
+  border: 1px solid #ffa235;
   cursor: pointer;
 }
 
 .card__list input:checked {
-  border: 1px solid var(--second-color);
-  background-color: var(--second-color);
+  border: 1px solid #ffa235;
+  background-color: #ffa235;
 }
 
 .card__list p {
@@ -68,7 +60,7 @@
 .card label {
   font-weight: bold;
   font-size: 16;
-  color: var(--main-color);
+  color: #211c70;
   padding-left: 16px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
@@ -76,16 +68,9 @@
 }
 
 .card__list--add {
+  padding-left: 22px;
+  padding-top: 20px;
   display: block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .card__list--add button {
@@ -95,12 +80,6 @@
   height: 14px;
   padding-bottom: 2px;
   width: 14px;
-}
-
-.card__container {
-  margin-left: 24px;
-  height: 500px;
-  overflow: scroll;
 }
 
 .button {
@@ -238,7 +217,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 24px;
 }
 
 .navBar--flotante {
