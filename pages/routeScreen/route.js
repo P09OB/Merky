@@ -1,6 +1,5 @@
 const sliderContainer = document.querySelector('.slider-container');
 
-
 // set up our state
 let isDragging = false;
 let startPos = 0; //es la pos del mouse () en el eje x
@@ -45,7 +44,7 @@ const createSlide = (obj) => {
       <label for="route">
           <button id=" route__button" class="button button__popup--checkbox">
               <p id="message">Recoger</p> <input class="checkbox__route" type="checkbox" id="route__checkbox"
-                  name="route" onclick="isChecked()">
+                  name="route">
           </button>
       </label>
     </div>
@@ -78,8 +77,6 @@ const renderSlides = async () => {
 
   });
 };
-
-
 
 
 // make responsive to viewport changes
