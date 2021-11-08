@@ -4,14 +4,17 @@
     border-radius: var(--border-radius);
     font-family: 'Nunito';
     height: 57px;
-    width: 327px;
+    width: 100%; 
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    
     
 
     &--flotante{
         position: relative;
         z-index: 0;
+        padding: 0 1em 2em 1em; 
     }
 
     &__home {
@@ -21,7 +24,6 @@
         height: 20px;
         padding-bottom: 2px;
         width: 27px;
-        margin-left: 45px;
         &:focus {
             background: url("../images/Casa_a.svg") no-repeat scroll 0 0 transparent; 
         }
@@ -34,7 +36,6 @@
             height: 20px;
             padding-bottom: 2px;
             width: 27px;
-            margin-left: 40px;
             &:focus {
                 background: url("../images/Lista_a.svg") no-repeat scroll 0 0 transparent; 
             }
@@ -47,7 +48,6 @@
             height: 20px;
             padding-bottom: 2px;
             width: 27px;
-            margin-left: 40px;
             &:focus {
                 background: url("../images/Comunidad_a.svg") no-repeat scroll 0 0 transparent; 
             }
@@ -60,7 +60,6 @@
             height: 20px;
             padding-bottom: 2px;
             width: 27px;
-            margin-left: 40px;
             &:focus {
                 background: url("../images/Perfil_a.svg") no-repeat scroll 0 0 transparent; 
             }

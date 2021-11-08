@@ -1,13 +1,10 @@
 .cardImg {
-    
     border-radius: var(--border-radius);
     position: relative;
     color: white;
     font-family: Nunito;
     box-shadow: var(--box-shadow);
-    margin-bottom: 16px;
-
-
+    width: 100%; 
     &--title {
         font-style: normal;
         font-weight: bold;
@@ -28,7 +25,7 @@
         font-style: normal;
         font-size: 14px;
         font-weight: normal;
-        margin: 0;
+        margin: 0 !important;
     }
     &--subtile1 {
         font-style: normal;
@@ -39,13 +36,11 @@
     &__categorylink {
         background-image: url("../images/bebidas.png");
         background-size: cover;
-        width: 327px;
-        height: 92px;
+        min-height: 92px;
     }
     &__retaillink {
         background: url("../images/exito.png");
         background-size: cover;
-        width: 327px;
         height: 150px;
     }
 }

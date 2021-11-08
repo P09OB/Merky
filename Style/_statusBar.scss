@@ -2,15 +2,20 @@
 
     font-family: "Nunito";
     border-radius: 0px 0px 8px 8px;
-    width: 375px;
+    width: 100vw;
     height: 167px;
-
+    box-sizing: border-box;
     color: var(--second-color);
     background-color: var(--main-background);
+    overflow: hidden;
+    padding: 0 1em;
 
     &__container {
-        padding: 16px;
-        margin: 0 9px;
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        // background-color: yellow;
     }
 
     &__navSection {
@@ -19,6 +24,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        // background-color: blue;
+        width: 100%;
     }
 
     &__nameSection {
@@ -40,4 +47,14 @@
         border-radius: var(--border-radius);
     }
 
+}
+
+.category-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0 1em; 
+    // background-color: red;
+    height:  550px; 
+    overflow-y: auto; 
 }

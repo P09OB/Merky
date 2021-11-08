@@ -23,6 +23,7 @@
 @import "doneRoute";
 @import "myProductsScreen";
 @import "chooseMarket";
+@import "categoryScreen"; 
 
 body {
   margin: 0;
@@ -45,7 +46,6 @@ body {
 
 .subtitle{
   margin: 0;
-  margin-bottom: 24px;
   font-family: Nunito;
   font-style: normal;
   font-weight: bold;
