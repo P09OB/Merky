@@ -18,11 +18,13 @@
 
 .recomendedContainer {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: scroll ;
 
     .product-card {
+        padding-top: 10px;
         margin-right: 16px;
         min-width: 98px;
+        border-radius:8px;
     }
 }
 
