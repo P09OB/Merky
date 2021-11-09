@@ -1,6 +1,8 @@
 .Section {
-    width: 375px;
+   
     padding-left: 20px;
+    margin-top: 20px;
+    
 
     .title {
         font-family: Nunito;
@@ -28,3 +30,18 @@
     }
 }
 
+
+footer {
+    
+   
+    margin-top:25px;
+    width: 100%;
+    height: 2.5rem;
+    box-sizing: border-box;
+
+}
+
+.cardProduct{
+
+    margin-top:10px;
+}
