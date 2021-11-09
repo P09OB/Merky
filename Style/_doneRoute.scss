@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+
     h1{
         font-size: 28px;
     }
@@ -12,4 +14,84 @@
     h4{
         font-size: 14px;
     }
+}
+
+.doneRoute-screen__actions{
+
+    display: flex;
+    flex-direction: column;
+
+    h4{
+
+        text-align: center;
+    }
+}
+.statusBar {
+
+    height:unset;
+}
+
+.time-container{
+
+   
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0 1em;
+
+    h3{
+
+        align-self: flex-start;
+    }
+}
+
+.rate-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0 1em;
+    margin-top:2em;
+
+    h3{
+
+        align-self: flex-start;
+    }
+}
+
+.doneRoute__Footer{
+
+    position: absolute;
+    bottom: 0;
+    margin: auto 0;
+    margin-bottom: 1em;
+    
+
+    display: flex;
+    justify-content:center;
+}
+
+.rate__starContainer{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16px;
+    width: 327px;
+
+    min-height: 55px;
+    border-radius:var(--border-radius) ;
+    background: #E0E0E9;
+
+    img{
+
+        width: 25px;
+        height: 23px;
+    }
+}
+
+.card__time{
+
+    margin-top: 16px;
 }
