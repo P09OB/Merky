@@ -61,7 +61,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1em;
   width: 100%;
 }
 
@@ -90,7 +93,6 @@ body {
 .card__list p {
   font-size: 14;
   color: #9f9f9f;
-  padding-left: 56px;
 }
 
 .card label {
@@ -129,6 +131,77 @@ body {
   display: block;
   height: 100%;
   width: 20px;
+}
+
+.create-list-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(33, 28, 112, 0.25);
+}
+
+.create-list {
+  font-family: Nunito;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70vw;
+  background-color: white;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+  overflow: hidden;
+}
+
+.create-list__actions {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+.create-list h1 {
+  font-size: 24px;
+  color: var(--second-color);
+}
+
+.create-list span {
+  color: var(--main-color);
+}
+
+.create-list button {
+  background-color: var(--main-color);
+  color: white;
+  padding: .5em;
+}
+
+.lists-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
 }
 
 .button {

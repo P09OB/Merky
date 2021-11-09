@@ -16,11 +16,11 @@
                 <div class="statusBar__navSection">
                     <button class="back-link reset-btn">
                         <svg class="statusBat__backSection" width="11" height="19" viewBox="0 0 11 19" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M10.5676 0.432366C9.99115 -0.144122 9.05647 -0.144122 8.47999 0.432366L0.729985 8.18237C0.153498 8.75885 0.153498 9.69353 0.729985 10.27L8.47999 18.02C9.05647 18.5965 9.99115 18.5965 10.5676 18.02C11.1441 17.4435 11.1441 16.5089 10.5676 15.9324L3.86146 9.22619L10.5676 2.52001C11.1441 1.94353 11.1441 1.00885 10.5676 0.432366Z"
-                            fill="#211C70" />
-                    </svg>
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.5676 0.432366C9.99115 -0.144122 9.05647 -0.144122 8.47999 0.432366L0.729985 8.18237C0.153498 8.75885 0.153498 9.69353 0.729985 10.27L8.47999 18.02C9.05647 18.5965 9.99115 18.5965 10.5676 18.02C11.1441 17.4435 11.1441 16.5089 10.5676 15.9324L3.86146 9.22619L10.5676 2.52001C11.1441 1.94353 11.1441 1.00885 10.5676 0.432366Z"
+                                fill="#211C70" />
+                        </svg>
                     </button>
                     <p class="statusBar__nameSection"><strong>Mis listas</strong></p>
                     <button class="button button--nullList">
@@ -39,17 +39,11 @@
         <div class="list__container">
             <div class="list-items">
 
-                <a href="./myProducts.html" class="card">
-                    <div class="card__list">
+                <div class="lists-container">
+                   <!-- List item space -->
+                </div>
 
-                        <span for="list">Lista para la semana</span>
-                        <p>
-                            Nov.24
-                        </p>
-                    </div>
-                </a>
-
-                <button class="card reset-btn">
+                <button class="card reset-btn new-product">
                     <div class="card__list--add">
                         <img src="./images/plus.svg" alt="">
                         <span for="add">Agregar nueva lista</span>
@@ -66,7 +60,24 @@
             </section>
         </div>
     </div>
+    
+    <div class="create-list-container hidden">
+        <div class="create-list">
+            <div class="create-list__actions">
+                <h1>Nueva lista</h1>
+                <span>Escribe un nombre para tu lista</span>
+                <div class="input__container">
+                    <input class="input input--right list-name" type="text" placeholder="Nombre a tu lista">
+                    <img class="input__img input__img--right" src="./images/IconEdit.svg">
+                </div>
+            </div>
+            <button class="reset-btn create-list-btn">Aceptar</button>
+        </div>
+
+    </div>
     <script src="./script/headerActions.js"></script>
+    <script src="./script/myList.js"></script>
+    
 </body>
 
 </html>
