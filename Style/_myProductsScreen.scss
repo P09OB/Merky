@@ -1,53 +1,49 @@
-
-header{
-    h1{
-        font-size: 18px;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: bold;
-        text-align: center;
-        color:var(--second-color);
-        margin-top:24px;
-        margin-bottom:9px;
-        padding: 0;
+header {
+  h1 {
+    font-size: 18px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: var(--second-color);
+    margin-top: 24px;
+    margin-bottom: 9px;
+    padding: 0;
+  }
+  p {
+    font-size: 12px;
+    font-family: "Nunito";
+    text-align: center;
+    color: var(--main-color);
+    margin-top: 9px;
+    margin-bottom: 9px;
+    padding: 0;
+    strong {
+      font-weight: bold;
     }
-    p{
-        font-size: 12px;
-        font-family: "Nunito";
-        text-align: center;
-        color: var(--main-color);
-        margin-top:9px;
-        margin-bottom:9px;
-        padding: 0;
-        strong{
-        font-weight: bold;
-        }
-    }
+  }
 }
 
-.myProducts__container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .cardProduct{
+.myProducts__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .cardProduct {
     margin-top: 8px;
     margin-bottom: 8px;
-
-    }
-    .cardNewProduct{
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
+  }
+  .cardNewProduct {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 }
 
-.navBar__container{
-    display: flex;
-    flex-direction: column;
-  align-self: flex-end;
+.navBar__container { 
+    
   position: fixed;
   left: 50%;
   bottom: 0px;
   transform: translate(-50%, -50%);
-  margin: 0 auto;
-   
+  width: 100%; 
+  padding: 1em; 
 }
