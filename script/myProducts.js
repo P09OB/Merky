@@ -1,3 +1,3 @@
 document.querySelector('.start-route').addEventListener('click', () => {
-  window.location = '../route.html';
+  window.location = './route.html';
 });
