@@ -41,6 +41,16 @@ body {
   font-family: "Nunito";
   height: 57px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card__list {
@@ -50,7 +60,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 16px;
+  padding-left: 1em;
+  width: 100%;
 }
 
 .card__list input {
@@ -91,19 +102,32 @@ body {
   min-width: fit-content;
 }
 
-.card__list--add {
-  padding-left: 22px;
-  padding-top: 20px;
-  display: block;
+.card span {
+  font-weight: bold;
+  font-size: 16;
+  color: #211c70;
+  padding-left: 16px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
-.card__list--add button {
-  background: url("../images/plus.svg") no-repeat scroll 0 0 transparent;
-  border: #f9f9f9;
-  cursor: pointer;
-  height: 14px;
-  padding-bottom: 2px;
-  width: 14px;
+.card__list--add {
+  display: block;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1em;
+}
+
+.card__list--add img {
+  display: block;
+  height: 100%;
+  width: 20px;
 }
 
 .button {
