@@ -1062,6 +1062,9 @@ body {
           align-items: center;
   border-radius: 8px 8px 0 0;
   padding: 2em 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .slider-container {

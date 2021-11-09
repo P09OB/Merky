@@ -1,5 +1,4 @@
 const sliderContainer = document.querySelector('.slider-container');
-
 // set up our state
 let isDragging = false;
 let startPos = 0; //es la pos del mouse () en el eje x
@@ -35,7 +34,7 @@ const createSlide = (obj) => {
   <div class="route-element-container">
     <div class="route route-element">
       <div class="route__box">
-          <div class="route__img"><img src="../../images/fanta.png"></div>
+          <div class="route__img"><img src="./images/fanta.png"></div>
           <div class="route__info">
               <h1 class="route__number">1</h1>
               <h2 class="route__name">Fanta - 350ml</h2>
