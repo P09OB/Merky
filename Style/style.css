@@ -40,7 +40,7 @@ body {
   border-radius: 8px;
   font-family: "Nunito";
   height: 57px;
-  width: 327px;
+  width: 100%;
 }
 
 .card__list {
@@ -187,11 +187,11 @@ body {
   position: relative;
   background: #ddd;
   direction: ltr;
-  width: 215px;
+  width: 100%;
 }
 
 .input__container--big {
-  width: 327px;
+  width: 100%;
 }
 
 .input__searchBar {
@@ -1121,7 +1121,22 @@ header p strong {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
-  padding: 1em;
+  padding: 0 1em;
+}
+
+.products-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.products-footer .button {
+  width: 100% !important;
 }
 
 .chooseMarket {
@@ -1223,9 +1238,44 @@ header p strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list-screen {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.list-items {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.list-items > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.navBar-container {
+  padding: 2em 1em;
 }
 
 .Section {

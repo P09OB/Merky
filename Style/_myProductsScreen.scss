@@ -45,5 +45,14 @@ header {
   bottom: 0px;
   transform: translate(-50%, -50%);
   width: 100%; 
-  padding: 1em; 
+  padding: 0 1em; 
+}
+
+.products-footer{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  .button{
+    width: 100% !important; 
+  }
 }
