@@ -1,5 +1,4 @@
 const sliderContainer = document.querySelector('.slider-container');
-
 // set up our state
 let isDragging = false;
 let startPos = 0; //es la pos del mouse () en el eje x
