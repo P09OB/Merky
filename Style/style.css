@@ -1224,10 +1224,13 @@ header p strong {
   position: fixed;
   left: 50%;
   bottom: 0px;
-  -webkit-transform: translate(-50%, -28%);
-          transform: translate(-50%, -28%);
+  -webkit-transform: translate(-50%, -29%);
+          transform: translate(-50%, -29%);
   width: 100%;
   padding: 0 1em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .products-footer {
@@ -1243,6 +1246,7 @@ header p strong {
 
 .products-footer .button {
   width: 100% !important;
+  padding: 1em;
 }
 
 .chooseMarket {

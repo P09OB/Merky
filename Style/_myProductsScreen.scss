@@ -37,13 +37,13 @@ header{
 }
 
 .navBar__container { 
-    
   position: fixed;
   left: 50%;
   bottom: 0px;
-  transform: translate(-50%, -28%);
+  transform: translate(-50%, -29%);
   width: 100%; 
   padding: 0 1em; 
+  height: fit-content;
 }
 
 .products-footer{
@@ -52,5 +52,6 @@ header{
   gap: 1em;
   .button{
     width: 100% !important; 
+    padding: 1em;
   }
 }
