@@ -555,13 +555,13 @@ body {
 }
 
 .cardProduct {
-  width: 327px;
-  height: 92px;
+  width: 100%;
   background-color: var(--main-background);
   border-radius: var(--border-radius);
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
   position: relative;
+  margin: 0 !important;
 }
 
 .cardProduct__container {
@@ -569,6 +569,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .cardProduct__size {
@@ -1394,8 +1395,8 @@ header p strong {
 }
 
 .Section {
-  padding-left: 20px;
   margin-top: 20px;
+  padding: 0 1em;
 }
 
 .Section .title {
@@ -1406,6 +1407,8 @@ header p strong {
 }
 
 .Section .categoriesContainer {
+  width: 100%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1419,11 +1422,10 @@ header p strong {
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
+  gap: 1em;
 }
 
 .recomendedContainer .product-card {
-  padding-top: 10px;
-  margin-right: 16px;
   min-width: 98px;
   border-radius: 8px;
 }
