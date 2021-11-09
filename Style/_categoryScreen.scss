@@ -1,8 +1,14 @@
 .category-screen{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100vh; 
+  .subtitle{
+    font-family: nunito;
+    color: var(--main-color); 
+    font-weight: bold;
+    font-size: 16px; 
+    margin: 1em 1em;
+  }
 }
 
 
