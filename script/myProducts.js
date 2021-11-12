@@ -15,6 +15,7 @@ console.log(listProducts);
 
 const createProductCard = () => {
   const cardProduct = document.createElement('div');
+  cardProduct.classList.add('cardProduct'); 
   cardProduct.innerHTML = `
     <div class="cardProduct__container">
       <div class="cardProduct__img">
