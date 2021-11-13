@@ -8,7 +8,7 @@ const onGetListArray = () => {
   return JSON.parse(localStorage.getItem('listArray')); 
 }
 
-// Add item to list array
+// Add list to array of list 
 const onAddList = (name) => {
   const newItem = {
     id: Math.random().toString(),

@@ -470,6 +470,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  gap: 1em;
 }
 
 .statusBar__navSection {
@@ -798,8 +799,6 @@ body {
 }
 
 .product-card {
-  width: 98px;
-  min-height: 133px;
   background-color: var(--second-color);
   border-radius: var(border-radius);
   font-family: Nunito;
@@ -1504,11 +1503,36 @@ header p strong {
 
 .navBar-container {
   padding: 2em 1em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
 .Section {
   margin-top: 20px;
   padding: 0 1em;
+}
+
+.Section-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.Section-suggested {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
 }
 
 .Section .title {
@@ -1524,9 +1548,15 @@ header p strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 1em;
+  padding-bottom: 7em;
 }
 
 .recomendedContainer {
@@ -1534,17 +1564,18 @@ header p strong {
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
-  gap: 1em;
+  width: 100%;
 }
 
 .recomendedContainer .product-card {
-  padding: 1em 0;
   min-width: 98px;
+  padding: 1em 0;
   border-radius: 8px;
+  margin-right: 0.5em;
 }
 
 footer {
-  margin-top: .5em;
+  margin-top: 0.5em;
   width: 100%;
   height: 2.5rem;
   -webkit-box-sizing: border-box;
@@ -1553,6 +1584,25 @@ footer {
 
 .cardProduct {
   margin-top: 10px;
+}
+
+.bebidas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+.bebidas-info {
+  overflow-y: scroll;
+  height: 80vh;
 }
 
 º
