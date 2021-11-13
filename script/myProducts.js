@@ -7,9 +7,11 @@ document.querySelector('.cardNewProduct__container').addEventListener('click', (
 });
 
 const params = new URLSearchParams(location.search)
-const currentListId = params.get('id')
+const currentListId = params.get('id');
+console.log(currentListId)
+
+if (!onGetSingleList(currentListId)) window.location = './notFound.html';
 const listProducts = onGetSingleList(currentListId).products;
-if (!listProducts) window.location = './notFound.html';
 console.log(listProducts);
 
 
