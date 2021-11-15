@@ -996,9 +996,10 @@ body {
 .community-list {
   background: #211c70;
   width: 100%;
-  color: #F5F5F5;
+  color: #f5f5f5;
   font-family: Nunito;
   font-weight: bold;
+  border-radius: 8px;
 }
 
 .community-list-info {
@@ -1017,24 +1018,74 @@ body {
   padding: 0.5rem;
 }
 
-.community-list-image {
-  border-radius: 50%;
-  width: 13%;
-  padding-left: 0.5rem;
-}
-
 .community-list-user {
-  color: #F5F5F5;
+  color: #f5f5f5;
   font-weight: normal;
   font-size: 12px;
-  margin-left: 0.2rem;
+  margin-left: 0.5rem;
 }
 
 .community-list-products {
-  color: #FFA235;
+  color: #ffa235;
   font-size: 14px;
   margin-left: auto;
   margin-right: 0.5rem;
+}
+
+.community-list-img-container {
+  position: relative;
+  width: 15%;
+  margin-left: 0.5rem;
+}
+
+.community-list-img-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.community-list-img-container .community-list-image {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page-header {
+  color: #211c70;
+  font-family: Nunito;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.communityListScreen {
+  padding: 1em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page-subtitle {
+  color: #4f4f4f;
+  font-family: Nunito;
+  font-weight: bold;
+}
+
+.communityListContainer {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  overflow-y: scroll;
 }
 
 .route-screen {

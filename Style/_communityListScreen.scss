@@ -1,0 +1,25 @@
+.page-header {
+    color: #211c70;
+    font-family: Nunito;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+.communityListScreen {
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+.page-subtitle {
+    color: #4f4f4f;
+    font-family: Nunito;
+    font-weight: bold;
+}
+.communityListContainer{
+    margin-top: 1rem;
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    gap: 1em;
+    overflow-y: scroll;
+}
