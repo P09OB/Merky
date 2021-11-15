@@ -1,23 +1,55 @@
 const productsContainer = document.querySelector('.user-products-list');
-document.querySelector('.start-route').addEventListener('click', () => {
-  window.location = './route.html';
+const btnStart = document.querySelector('.start-route')
+const addProduct = document.querySelector('.cardNewProduct');
+const params = new URLSearchParams(location.search)
+const type = params.get('type');
+const currentListId = params.get('id');
+let listProducts=[];
+
+btnStart.addEventListener('click', () => {
+
+  if (type === "list") {
+    window.location = './route.html';
+    console.log("list")
+  }
+  else if (type === "community") {
+
+    //duplica
+  }
+
 });
-document.querySelector('.cardNewProduct__container').addEventListener('click', () => {
+addProduct.addEventListener('click', () => {
   window.location = './category.html';
 });
 
-const params = new URLSearchParams(location.search)
-const currentListId = params.get('id');
-console.log(currentListId)
 
-if (!onGetSingleList(currentListId)) window.location = './notFound.html';
-const listProducts = onGetSingleList(currentListId).products;
-console.log(listProducts);
+
+
+
+if (type === 'community') {
+
+  addProduct.classList.add('hidden');
+  btnStart.innerText = 'Añadir a mis listas'
+  const currentCommunityList = onGetSingleList(parseInt(currentListId), true, comunitylists)
+
+  if (!currentCommunityList) window.location = './notFound.html';
+  listProducts = currentCommunityList.products;
+
+}
+
+if (type === 'lists') {
+
+  if (!onGetSingleList(currentListId)) window.location = './notFound.html';
+  listProducts = onGetSingleList(currentListId).products;
+  console.log(listProducts);
+}
+
+
 
 
 const createProductCard = () => {
   const cardProduct = document.createElement('div');
-  cardProduct.classList.add('cardProduct'); 
+  cardProduct.classList.add('cardProduct');
   cardProduct.innerHTML = `
     <div class="cardProduct__container">
       <div class="cardProduct__img">
@@ -39,16 +71,17 @@ const createProductCard = () => {
       </div>
     </div>
   `;
-  productsContainer.appendChild(cardProduct); 
+  productsContainer.appendChild(cardProduct);
 }
 
 const renderProductsList = () => {
-  productsContainer.innerHTML = ''; 
+  productsContainer.innerHTML = '';
+  console.log(listProducts);
   listProducts.forEach((product) => {
-    createProductCard(); 
+    createProductCard();
   })
 }
-renderProductsList(); 
+renderProductsList();
 /*
 <div class="cardProduct">
     <div class="cardProduct__container">

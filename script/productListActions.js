@@ -29,6 +29,11 @@ const onAddProduct = (listId, newProduct) => {
 }
 
 // Get a single list according to nav link
-const onGetSingleList = (id) => {
+const onGetSingleList = (id,isCommunity=false,communityLists=null) => {
+  
+  if(isCommunity){
+    console.log(id,isCommunity,communityLists);
+    return communityLists.find(list => list.id === id);
+  }
   return onGetListArray().find( list => list.id === id);
 }

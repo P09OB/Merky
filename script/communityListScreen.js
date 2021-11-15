@@ -1,15 +1,5 @@
-
 const communityContainer = document.querySelector('.communityListContainer');
 console.log(users);
-
-const comunitylists = [{
-    id: Math.random(),
-    name: "Comida de mar",
-    userId: 1,
-    products: [2, 3]
-
-}]
-
 
 const renderCommunityList = () => {
 
@@ -20,12 +10,11 @@ const renderCommunityList = () => {
 
             return element.id === list.userId;
         });
-        console.log(user);
-
+        
         const container = document.createElement('a');
 
         container.classList.add('community-list');
-        container.setAttribute('href', `./myProducts.html?id=${list.id}&type=comunidad`)
+        container.setAttribute('href', `./myProducts.html?id=${list.id}&type=community`)
         container.innerHTML =
             `
         

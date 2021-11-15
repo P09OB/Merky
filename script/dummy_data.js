@@ -163,3 +163,11 @@ const products = [
         price: 8760,
     }
 ]
+
+const comunitylists = [{
+    id: 14,
+    name: "Comida de mar",
+    userId: 1,
+    products: [2, 3]
+
+}]
