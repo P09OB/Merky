@@ -365,7 +365,7 @@ body {
   width: 27px;
 }
 
-.navBar__home:focus {
+.navBar__home--active {
   background: url("../images/Casa_a.svg") no-repeat scroll 0 0 transparent;
 }
 
@@ -378,7 +378,7 @@ body {
   width: 27px;
 }
 
-.navBar__list:focus {
+.navBar__list--active {
   background: url("../images/Lista_a.svg") no-repeat scroll 0 0 transparent;
 }
 
@@ -391,7 +391,7 @@ body {
   width: 27px;
 }
 
-.navBar__community:focus {
+.navBar__community--active {
   background: url("../images/Comunidad_a.svg") no-repeat scroll 0 0 transparent;
 }
 
@@ -404,7 +404,7 @@ body {
   width: 27px;
 }
 
-.navBar__profile:focus {
+.navBar__profile--active {
   background: url("../images/Perfil_a.svg") no-repeat scroll 0 0 transparent;
 }
 
@@ -1034,7 +1034,7 @@ body {
 
 .community-list-img-container {
   position: relative;
-  width: 15%;
+  width: 10%;
   margin-left: 0.5rem;
 }
 

@@ -1,11 +1,8 @@
-//como le dejo el seleccionado si es un boton
-// const communitybtn = document.querySelector('.navBar__community');
 
-// communitybtn.focus();
 const communityContainer = document.querySelector('.communityListContainer');
 console.log(users);
 
-const listas = [{
+const comunitylists = [{
     id: Math.random(),
     name: "Comida de mar",
     userId: 1,
@@ -17,7 +14,7 @@ const listas = [{
 const renderCommunityList = () => {
 
 
-    listas.forEach(list => {
+    comunitylists.forEach(list => {
 
         let user = users.find(element => {
 
@@ -28,7 +25,7 @@ const renderCommunityList = () => {
         const container = document.createElement('a');
 
         container.classList.add('community-list');
-        container.setAttribute('href', `./myProducts.html?id=${list.id}`)
+        container.setAttribute('href', `./myProducts.html?id=${list.id}&type=comunidad`)
         container.innerHTML =
             `
         

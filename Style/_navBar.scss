@@ -29,7 +29,7 @@
         height: 20px;
         padding-bottom: 2px;
         width: 27px;
-        &:focus {
+        &--active  {
             background: url("../images/Casa_a.svg") no-repeat scroll 0 0 transparent; 
         }
     }
@@ -41,7 +41,7 @@
             height: 20px;
             padding-bottom: 2px;
             width: 27px;
-            &:focus {
+            &--active  {
                 background: url("../images/Lista_a.svg") no-repeat scroll 0 0 transparent; 
             }
     }
@@ -53,7 +53,7 @@
             height: 20px;
             padding-bottom: 2px;
             width: 27px;
-            &:focus {
+            &--active {
                 background: url("../images/Comunidad_a.svg") no-repeat scroll 0 0 transparent; 
             }
     }
@@ -65,7 +65,7 @@
             height: 20px;
             padding-bottom: 2px;
             width: 27px;
-            &:focus {
+            &--active {
                 background: url("../images/Perfil_a.svg") no-repeat scroll 0 0 transparent; 
             }
     }

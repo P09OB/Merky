@@ -5,6 +5,7 @@ const createList = document.querySelector('.create-list');
 const createListBtn = document.querySelector('.create-list-btn');
 const listNameInput = document.querySelector('.list-name');
 console.log(onGetListArray());
+
 const handleCreateLIst = ({title, id}) => {
 
   const card = document.createElement('a');
