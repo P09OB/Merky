@@ -7,6 +7,62 @@ const users = [
         profilePicture:"https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
         
     }
+    ,
+    {   
+        id:math.random(),
+        userName:"Miguel Olivares",
+        profilePicture:"https://dentalia.orionthemes.com/demo-1/wp-content/uploads/2016/10/dentalia-demo-deoctor-3-1-750x750.jpg",
+        
+    }
+    ,
+    {   
+        id:math.random(),
+        userName:"Paula Ordoñez",
+        profilePicture:"https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
+        
+    }
+    ,
+    {   
+        id:math.random(),
+        userName:"Luara Leon",
+        profilePicture:"https://images.unsplash.com/photo-1582610285985-a42d9193f2fd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        
+    }
+    ,
+    {   
+        id:math.random(),
+        userName:"Camilo Jimenez",
+        profilePicture:"https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg",
+        
+    }
+    ,
+    {   
+        id:math.random(),
+        userName:"Valentina Zapata",
+        profilePicture:"https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg",
+        
+    }
+    ,
+    {   
+        id:math.random(),
+        userName:"Diana Giraldo",
+        profilePicture:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZSUyMHBob3RvfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        
+    }
+    ,
+    {   
+        id:math.random(),
+        userName:"Daniel Martinez",
+        profilePicture:"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        
+    }
+    ,
+    {   
+        id:math.random(),
+        userName:"Miguel Rivera",
+        profilePicture:"https://us.123rf.com/450wm/dglimages/dglimages1807/dglimages180700174/105059079-front-view-of-a-young-male-adult-looking-and-smiling-at-the-camera-while-he-gets-a-portrait-taken-.jpg?ver=6",
+        
+    }
 ]
 
 //añade mas productos  usando esa estructura, poniendo nuevas imagenes de productos 
