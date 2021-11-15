@@ -4,8 +4,8 @@ const btns = navBar.querySelectorAll("button");
 console.log(navBar);
 console.log(btns);
 
-const params = new URLSearchParams(location.search)
-const currenScreen = params.get('screen');
+const navParams = new URLSearchParams(location.search);
+const currenScreen = navParams.get('screen');
 
 btns[1].addEventListener("click", () =>{
 
