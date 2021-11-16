@@ -10,7 +10,7 @@ const handleCreateLIst = ({title, id}) => {
 
   const card = document.createElement('a');
   card.classList.add('card');
-  card.setAttribute('href', `./myProducts.html?id=${id}`)
+  card.setAttribute('href', `./myProducts.html?id=${id}&type=list`)
   card.innerHTML = `
     <div class="card__list">
         <span for="list">${title}</span>

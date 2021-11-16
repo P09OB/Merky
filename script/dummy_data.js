@@ -71,7 +71,7 @@ const products = [
     {
         title: "Papas Margarita Pollo", 
         description: "las vende el pibe", 
-        id: 2, 
+        id: 0, 
         img: "https://colsubsidio.vteximg.com.br/arquivos/ids/166452-1200-1200/7702189053770.jpg?v=637299796871330000", 
         rating: 5, 
         price: 4000,
@@ -81,7 +81,7 @@ const products = [
     {
         title: "Papa Margarita Crema y Cebolla", 
         description: "Papa Margarita Crema y Cebolla x 110 gr", 
-        id: 3, 
+        id: 1, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/07/23142245/7702189056719.jpg", 
         rating: 4, 
         price: 3960,
@@ -91,7 +91,7 @@ const products = [
     {
         title: "Atun Vancams Lomito Aceite", 
         description: "Atun Vancams Lomito Aceite x 160 gr", 
-        id: Math.random(), 
+        id: 2, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/09/02133732/7702367002613.jpg", 
         rating: 4, 
         price: 6900,
@@ -101,7 +101,7 @@ const products = [
     {
         title: "Avena Alpina", 
         description: "Avena Alpina x 1000 ml", 
-        id: Math.random(), 
+        id: 3, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/05/31164359/7702001044702.jpg", 
         rating: 3, 
         price: 6080,
@@ -111,7 +111,7 @@ const products = [
     {
         title: "Cereal Bonyurt Black de Alpina", 
         description: "Avena Alpina x 1000 ml", 
-        id: Math.random(), 
+        id: 4, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/05/31150032/7702001086498.jpg", 
         rating: 5, 
         price: 3050,
@@ -121,7 +121,7 @@ const products = [
     {
         title: "Kumis Alpina Natural", 
         description: "Kumis Alpina Natural x 1750 ml", 
-        id: Math.random(), 
+        id: 5, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/05/31145850/7702001048656.jpg", 
         rating: 5, 
         price: 6080,
@@ -130,7 +130,7 @@ const products = [
     {
         title: "Cafe Aguila Roja", 
         description: "Cafe Aguila Roja x 250 gr", 
-        id: Math.random(), 
+        id: 6, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/10/19124004/7702040027001.jpg", 
         rating: 2, 
         price: 6230,
@@ -139,7 +139,7 @@ const products = [
     {
         title: "Colcafe Granulado", 
         description: "Colcafe Granulado x 85 gr", 
-        id: Math.random(), 
+        id: 7, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/09/02185531/7702032104376.jpg", 
         rating: 5, 
         price: 8400,
@@ -148,7 +148,7 @@ const products = [
     {
         title: "Cereal Fitness", 
         description: "Cereal Fitness x 285 gr", 
-        id: Math.random(), 
+        id: 8, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/09/14165403/7501058614032.jpg", 
         rating: 5, 
         price: 8760,
@@ -157,7 +157,7 @@ const products = [
     {
         title: "Chorizo Zenu Coctel Antioqueno", 
         description: "Chorizo Zenu Coctel Antioqueno x 300 gr", 
-        id: Math.random(), 
+        id: 9, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/09/01192348/7701101310052.jpg", 
         rating: 5, 
         price: 8760,

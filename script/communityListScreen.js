@@ -14,7 +14,7 @@ const renderCommunityList = () => {
         const container = document.createElement('a');
 
         container.classList.add('community-list');
-        container.setAttribute('href', `./myProducts.html?id=${list.id}&type=community`)
+        container.setAttribute('href', `./myProducts.html?id=${list.id}&type=community&screen=community`)
         container.innerHTML =
             `
         
