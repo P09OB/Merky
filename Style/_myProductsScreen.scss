@@ -28,12 +28,33 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1em 0;
+  
   gap: 1em; 
+  // background-color: red;
+  height: 80%; 
+  padding-bottom: 1300px;
+  overflow-y: auto;
+  
+
   .cardProduct {
   }
   .cardNewProduct {
   }
+}
+
+.my-products-body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  overflow: hidden;
+  // background-color: blue;
+}
+
+.my-products-header{
+  // flex-grow: 1;
+  height: 30% ; 
+  // background-color: yellow;
+  margin-bottom: 1em;
 }
 
 .navBar__container { 

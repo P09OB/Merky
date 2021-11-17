@@ -1423,8 +1423,27 @@ header p strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1em 0;
   gap: 1em;
+  height: 80%;
+  padding-bottom: 1300px;
+  overflow-y: auto;
+}
+
+.my-products-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.my-products-header {
+  height: 30%;
+  margin-bottom: 1em;
 }
 
 .navBar__container {

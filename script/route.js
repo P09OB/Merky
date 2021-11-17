@@ -1,3 +1,9 @@
+const params = new URLSearchParams(location.search)
+const currentListId = params.get('listId');
+const currentList = onGetSingleList(currentListId); 
+const productsFromList = getProductsFromIdList(currentList.products)
+
+
 const sliderContainer = document.querySelector('.slider-container');
 // set up our state
 let isDragging = false;
@@ -7,37 +13,20 @@ let prevTranslate = 0;
 let animationID;
 let currentIndex = 0;
 
-const DUMMY_DATA = [
-  {
-    product: 'w'
-  },
-  {
-    product: 'w'
-  },
-  {
-    product: 'w'
-  },
-  {
-    product: 'w'
-  },
-  {
-    product: 'w'
-  },
-  {
-    product: 'w'
-  },
-];
-const createSlide = (obj) => {
+const DUMMY_DATA = [...productsFromList];
+console.log(DUMMY_DATA);
+
+const createSlide = ({title, img}) => {
   const slide = document.createElement('div');
   slide.classList.add('slide');
   slide.innerHTML = (`
   <div class="route-element-container">
     <div class="route route-element">
       <div class="route__box">
-          <div class="route__img"><img src="./images/fanta.png"></div>
+          <div class="route__img"><img src="${img}"></div>
           <div class="route__info">
               <h1 class="route__number">1</h1>
-              <h2 class="route__name">Fanta - 350ml</h2>
+              <h2 class="route__name">${title}</h2>
           </div>
       </div>
       <label for="route">

@@ -2,6 +2,7 @@ const productsContainer = document.querySelector('.user-products-list');
 const btnStart = document.querySelector('.start-route')
 const addProduct = document.querySelector('.cardNewProduct');
 const myProductsTitle = document.querySelector('.my-products__title');
+const total = document.querySelector('.my-products__total').querySelector('span');
 const params = new URLSearchParams(location.search)
 const type = params.get('type');
 const currentListId = params.get('id');
@@ -11,7 +12,7 @@ btnStart.addEventListener('click', () => {
   
 
   if (type === "list") {
-    window.location = './route.html';
+    window.location = `./route.html?listId=${currentListId}`;
     console.log("list")
   }
   else if (type === "community") {
@@ -43,6 +44,8 @@ if (type === 'list') {
 
   if (!onGetSingleList(currentListId)) window.location = './notFound.html';
   listProducts = onGetSingleList(currentListId).products;
+  const productsFromData = getProductsFromIdList(listProducts)
+  total.innerText = productsFromData.reduce((acc, val) => acc + val.price,0)
   console.log(listProducts);
 }
 
@@ -81,7 +84,7 @@ const renderProductsList = () => {
   console.log(listProducts);
 
   if (type === 'community' || type === 'list') {
-    const dummyProducts = products.filter(({ id }) => listProducts.includes(id));
+    const dummyProducts = getProductsFromIdList(listProducts)
     console.log(dummyProducts);
     dummyProducts.forEach((product) => {
       createProductCard(product);

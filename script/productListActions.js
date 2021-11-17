@@ -37,3 +37,8 @@ const onGetSingleList = (id,isCommunity=false,communityLists=null) => {
   }
   return onGetListArray().find( list => list.id === id);
 }
+
+//get the list of products according to a given id list array
+const getProductsFromIdList = (list) => {
+  return products.filter(({ id }) => list.includes(id));
+}
