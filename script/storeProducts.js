@@ -1,5 +1,10 @@
 const categoriesContainer = document.querySelector('.categoriesContainer');
 
+const params = new URLSearchParams(location.search)
+const currentList = params.get('listId');
+
+console.log(onGetSingleList(currentList));
+
 const renderShopProduct = ({title, description, img, price, id}) => {
   const shopCardProduct = document.createElement('a');
   shopCardProduct.setAttribute('href', `./productDetail.html?id=${id}`)
@@ -22,12 +27,17 @@ const renderShopProduct = ({title, description, img, price, id}) => {
               <img class="cardProduct__star" src="./images/star.svg">
           </div>
           <p class="cardProduct__price"> ${price} </p>
-          <div class="cardProduct--addLink">
+          <button class="cardProduct--addLink reset-btn add-product-btn">
               <img src="./images/lista2.svg"></img>
-          </div>
+          </button>
       </div>
     </div>
   `;
+  shopCardProduct.querySelector('.add-product-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(title); 
+    onAddProduct(currentList,id ); 
+  });
   categoriesContainer.appendChild(shopCardProduct); 
 }
 
