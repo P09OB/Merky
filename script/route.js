@@ -46,8 +46,11 @@ const createSlide = ({title, img}) => {
     slide.classList.add('slide--active');
     slide.querySelector('#message').innerText = 'Recogido'; 
     activeProducts.push(title); 
-    console.log(activeProducts.length);
-    progressBar.style.width = `${(activeProducts.length / DUMMY_DATA.length)*100 }%`;
+    
+    const activeProductsLength = activeProducts.length; 
+    const dummyProductsLength = DUMMY_DATA.length; 
+    progressBar.style.width = `${(activeProductsLength / dummyProductsLength)*100 }%`;
+    if(activeProductsLength === dummyProductsLength) window.location = './doneRoute.html'
   })
   return slide;
 }
