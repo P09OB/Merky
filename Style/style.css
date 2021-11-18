@@ -574,7 +574,6 @@ body {
 }
 
 .cardProduct__size {
-  width: 95px;
   height: 65px;
 }
 
@@ -895,40 +894,33 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .route__img {
-  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
   height: 129px;
+  overflow: hidden;
   background-color: #ffdbb0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .route__img img {
   width: 100%;
-  height: auto;
-}
-
-@supports ((-o-object-fit: cover) or (object-fit: cover)) {
-  .route__img img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center center;
-       object-position: center center;
-  }
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .route__info {
-  padding: 0;
+  padding: 1em;
   margin: 0;
-  width: 124px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .route__info h1 {

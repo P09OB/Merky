@@ -25,7 +25,6 @@ const createSlide = ({title, img}) => {
       <div class="route__box">
           <div class="route__img"><img src="${img}"></div>
           <div class="route__info">
-              <h1 class="route__number">1</h1>
               <h2 class="route__name">${title}</h2>
           </div>
       </div>
