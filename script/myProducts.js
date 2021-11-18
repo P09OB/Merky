@@ -13,11 +13,11 @@ btnStart.addEventListener('click', () => {
 
   if (type === "list") {
     window.location = `./route.html?listId=${currentListId}`;
-    console.log("list")
+    
   }
   else if (type === "community") {
 
-    //duplica
+    onDuplicateList(parseInt(currentListId));
   }
 
 });
@@ -33,7 +33,7 @@ if (type === 'community') {
 
   addProduct.classList.add('hidden');
   btnStart.innerText = 'Añadir a mis listas'
-  const currentCommunityList = onGetSingleList(parseInt(currentListId), true, comunitylists)
+  const currentCommunityList = onGetSingleList(currentListId, true, comunitylists)
   myProductsTitle.innerText =  currentCommunityList.name; 
   if (!currentCommunityList) window.location = './notFound.html';
   listProducts = currentCommunityList.products;
@@ -42,8 +42,9 @@ if (type === 'community') {
 
 if (type === 'list') {
 
-  if (!onGetSingleList(currentListId)) window.location = './notFound.html';
+   if (!onGetSingleList(currentListId)) window.location = './notFound.html';
   listProducts = onGetSingleList(currentListId).products;
+  console.log("list products" , listProducts)
   const productsFromData = getProductsFromIdList(listProducts)
   total.innerText = productsFromData.reduce((acc, val) => acc + val.price,0)
   console.log(listProducts);
@@ -85,7 +86,7 @@ const renderProductsList = () => {
 
   if (type === 'community' || type === 'list') {
     const dummyProducts = getProductsFromIdList(listProducts)
-    console.log(dummyProducts);
+    
     dummyProducts.forEach((product) => {
       createProductCard(product);
     })
