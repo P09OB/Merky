@@ -2,8 +2,8 @@ const params = new URLSearchParams(location.search)
 const currentListId = params.get('listId');
 const currentList = onGetSingleList(currentListId); 
 const productsFromList = getProductsFromIdList(currentList.products)
-
-
+const progressBar = document.querySelector('.progress-bar__current-progress');
+const title = document.querySelector('.title');
 const sliderContainer = document.querySelector('.slider-container');
 // set up our state
 let isDragging = false;
@@ -13,12 +13,17 @@ let prevTranslate = 0;
 let animationID;
 let currentIndex = 0;
 
+title.innerText = onGetSingleList(currentListId).title; 
+
 const DUMMY_DATA = [...productsFromList];
 console.log(DUMMY_DATA);
+
+const activeProducts = []; 
 
 const createSlide = ({title, img}) => {
   const slide = document.createElement('div');
   slide.classList.add('slide');
+  
   slide.innerHTML = (`
   <div class="route-element-container">
     <div class="route route-element">
@@ -29,14 +34,21 @@ const createSlide = ({title, img}) => {
           </div>
       </div>
       <label for="route">
-          <button id=" route__button" class="button button__popup--checkbox">
-              <p id="message">Recoger</p> <input class="checkbox__route" type="checkbox" id="route__checkbox"
-                  name="route">
+          <button id="route__button" class="button button__popup--checkbox">
+              <p id="message">Recoger</p> 
           </button>
       </label>
     </div>
   </div>
   `);
+  const btn = slide.querySelector('.button__popup--checkbox'); 
+  btn.addEventListener('click', () => {
+    slide.classList.add('slide--active');
+    slide.querySelector('#message').innerText = 'Recogido'; 
+    activeProducts.push(title); 
+    console.log(activeProducts.length);
+    progressBar.style.width = `${(activeProducts.length / DUMMY_DATA.length)*100 }%`;
+  })
   return slide;
 }
 
@@ -47,8 +59,6 @@ const renderSlides = async () => {
   DUMMY_DATA.forEach((slide, index) => {
     const currentSlide = createSlide(slide);
     sliderContainer.appendChild(currentSlide);
-
-
     const slideImage = currentSlide.querySelector('img')
     // disable default image drag
     slideImage.addEventListener('dragstart', (e) => e.preventDefault())
@@ -82,7 +92,6 @@ function getPositionX(event) {
 
 // use a HOF so we have index in a closure
 function touchStart(index) {
-
   return function (event) {
     currentIndex = index
     startPos = getPositionX(event)

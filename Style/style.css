@@ -1214,6 +1214,19 @@ body {
   cursor: grabbing;
 }
 
+.slide--active .route-element {
+  background-color: #211C70;
+}
+
+.slide--active .route-element label button {
+  background-color: white;
+  color: #211C70;
+}
+
+.slide--active .route-element .route__box .route__info h2 {
+  color: white;
+}
+
 .grabbing .slide img {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -1230,7 +1243,9 @@ body {
 }
 
 .progress-bar__current-progress {
-  width: 40%;
+  -webkit-transition: width .5s ease-in-out;
+  transition: width .5s ease-in-out;
+  width: 0%;
   height: 100%;
   border-radius: 100px;
   background-color: var(--second-color);
