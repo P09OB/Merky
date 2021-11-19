@@ -48,7 +48,7 @@ const renderSlides = async () => {
   DUMMY_DATA.forEach((slide, index) => {
     const currentSlide = createSlide(slide);
     sliderContainer.appendChild(currentSlide);
-
+   
 
     const slideImage = currentSlide.querySelector('img')
     // disable default image drag
@@ -116,7 +116,7 @@ function touchEnd() {
   setPositionByIndex()
 
   sliderContainer.classList.remove('grabbing')
-
+  console.log(currentIndex);
 }
 
 function animation() {
