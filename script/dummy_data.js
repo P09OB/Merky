@@ -165,7 +165,7 @@ const products = [
 ]
 
 const comunitylists = [{
-    id: 14,
+    id: "14",
     name: "Comida de mar",
     userId: 1,
     products: [2, 3]

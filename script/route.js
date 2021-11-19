@@ -2,8 +2,8 @@ const params = new URLSearchParams(location.search)
 const currentListId = params.get('listId');
 const currentList = onGetSingleList(currentListId); 
 const productsFromList = getProductsFromIdList(currentList.products)
-
-
+const progressBar = document.querySelector('.progress-bar__current-progress');
+const title = document.querySelector('.title');
 const sliderContainer = document.querySelector('.slider-container');
 // set up our state
 let isDragging = false;
@@ -13,31 +13,45 @@ let prevTranslate = 0;
 let animationID;
 let currentIndex = 0;
 
+title.innerText = onGetSingleList(currentListId).name; 
+
 const DUMMY_DATA = [...productsFromList];
 console.log(DUMMY_DATA);
+
+const activeProducts = []; 
 
 const createSlide = ({title, img}) => {
   const slide = document.createElement('div');
   slide.classList.add('slide');
+  
   slide.innerHTML = (`
   <div class="route-element-container">
     <div class="route route-element">
       <div class="route__box">
           <div class="route__img"><img src="${img}"></div>
           <div class="route__info">
-              <h1 class="route__number">1</h1>
               <h2 class="route__name">${title}</h2>
           </div>
       </div>
       <label for="route">
-          <button id=" route__button" class="button button__popup--checkbox">
-              <p id="message">Recoger</p> <input class="checkbox__route" type="checkbox" id="route__checkbox"
-                  name="route">
+          <button id="route__button" class="button button__popup--checkbox">
+              <p id="message">Recoger</p> 
           </button>
       </label>
     </div>
   </div>
   `);
+  const btn = slide.querySelector('.button__popup--checkbox'); 
+  btn.addEventListener('click', () => {
+    slide.classList.add('slide--active');
+    slide.querySelector('#message').innerText = 'Recogido'; 
+    activeProducts.push(title); 
+    
+    const activeProductsLength = activeProducts.length; 
+    const dummyProductsLength = DUMMY_DATA.length; 
+    progressBar.style.width = `${(activeProductsLength / dummyProductsLength)*100 }%`;
+    if(activeProductsLength === dummyProductsLength) window.location = './doneRoute.html'
+  })
   return slide;
 }
 
@@ -48,8 +62,11 @@ const renderSlides = async () => {
   DUMMY_DATA.forEach((slide, index) => {
     const currentSlide = createSlide(slide);
     sliderContainer.appendChild(currentSlide);
+<<<<<<< HEAD
    
 
+=======
+>>>>>>> fa4cf7f8d8d658bc47f35a222abde14dec718995
     const slideImage = currentSlide.querySelector('img')
     // disable default image drag
     slideImage.addEventListener('dragstart', (e) => e.preventDefault())
@@ -83,7 +100,6 @@ function getPositionX(event) {
 
 // use a HOF so we have index in a closure
 function touchStart(index) {
-
   return function (event) {
     currentIndex = index
     startPos = getPositionX(event)

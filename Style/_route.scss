@@ -46,35 +46,32 @@
 
   &__box {
     display: flex;
-    justify-content: space-between;
+    
   }
   &__img {
-    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
     height: 129px;
+    overflow: hidden;
     background-color: #ffdbb0;
+    flex-grow: 1;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%; 
+      object-fit: cover;
     }
-    @supports (object-fit: cover) {
-      img {
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-      }
-    }
+   
   }
 
   &__info {
-    padding: 0;
+    padding: 1em;
     margin: 0;
-
-    width: 124px;
+    flex-grow: 1;
     display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+    
+    
     h1 {
       font-family: nunito;
       font-size: 25px;
