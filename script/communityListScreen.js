@@ -1,5 +1,4 @@
 const communityContainer = document.querySelector('.communityListContainer');
-console.log(users);
 
 const renderCommunityList = () => {
 

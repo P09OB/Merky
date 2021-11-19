@@ -612,6 +612,13 @@ body {
   color: var(--second-color);
 }
 
+.cardProduct__delete {
+  margin-left: auto;
+  margin-top: auto;
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
 .cardProduct--addLink {
   background-color: #E0E0E0;
   position: absolute;

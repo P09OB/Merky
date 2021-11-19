@@ -6,14 +6,14 @@ const createListBtn = document.querySelector('.create-list-btn');
 const listNameInput = document.querySelector('.list-name');
 console.log(onGetListArray());
 
-const handleCreateLIst = ({title, id}) => {
+const handleCreateLIst = ({name, id}) => {
 
   const card = document.createElement('a');
   card.classList.add('card');
   card.setAttribute('href', `./myProducts.html?id=${id}&type=list`)
   card.innerHTML = `
     <div class="card__list">
-        <span for="list">${title}</span>
+        <span for="list">${name}</span>
         <p>
             Nov.24
         </p>
@@ -22,6 +22,8 @@ const handleCreateLIst = ({title, id}) => {
   `;
   listContainer.appendChild(card); 
 }
+
+
 createList.addEventListener('click', (e)=>{
   e.stopPropagation();
 })
@@ -40,9 +42,10 @@ createListBtn.addEventListener('click', () => {
 
 })
 
-const renderListArray = () => {
+const renderListArray = () => { 
   listContainer.innerHTML = ''; 
   onGetListArray().forEach(element => {
+    
     handleCreateLIst(element); 
   });
 }

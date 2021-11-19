@@ -13,7 +13,7 @@ let prevTranslate = 0;
 let animationID;
 let currentIndex = 0;
 
-title.innerText = onGetSingleList(currentListId).title; 
+title.innerText = onGetSingleList(currentListId).name; 
 
 const DUMMY_DATA = [...productsFromList];
 console.log(DUMMY_DATA);
