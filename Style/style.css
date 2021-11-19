@@ -1916,6 +1916,143 @@ footer {
   gap: 1em;
 }
 
+.login-screen {
+  font-family: Nunito;
+  width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  height: 100vh;
+  background-image: url("../images/loginCard.jpg");
+  background-size: cover;
+}
+
+.login-screen__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #211C70;
+  opacity: .83;
+}
+
+.login-screen img {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.login-screen__btn-container {
+  position: fixed;
+  bottom: 5%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  gap: 1.5em;
+  left: 0;
+  z-index: 10;
+}
+
+.login-screen__btn-container .register-btn {
+  color: white;
+  background-color: var(--second-color);
+}
+
+.auth-btn {
+  color: #211C70;
+  font-weight: bold;
+  width: 100%;
+  padding: 1em;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.auth-container {
+  font-family: Nunito;
+  z-index: 1000;
+  position: fixed;
+  bottom: -50%;
+  -webkit-transition: bottom .5s ease-in-out;
+  transition: bottom .5s ease-in-out;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 2em;
+  border-radius: 20px 20px 0 0;
+}
+
+.auth-container .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.auth-container .login h1 {
+  color: var(--main-color);
+}
+
+.auth-container button {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.auth-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+.auth-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  gap: .5em;
+}
+
+.auth-input span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.auth-input input {
+  background-color: #e6e6e6;
+  border: none;
+  outline: none;
+  padding: 1em;
+  border-radius: 8px;
+}
+
 .subtitle {
   margin: 0;
   font-family: Nunito;

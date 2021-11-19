@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+  <div class="login-screen">
+    <img src="./images/logo.svg" alt="logo">
+    <div class="login-screen__overlay"></div>
+    <footer class="login-screen__btn-container">
+      <button class="auth-btn reset-btn login-btn">Iniciar sesión</button>
+      <button class="auth-btn reset-btn register-btn">Registrarse</button>
+    </footer>
+  </div>
+  <section class="auth-container ">
+    <div class="login">
+      <h1>Iniciar Sesión</h1>
+      <div class="auth-info">
+        <label class="auth-input">
+          <span>Correo</span>
+          <input type="text">
+        </label>
+        <label class="auth-input">
+          <span>Contraseña</span>
+          <input type="password">
+        </label>
+      </div>
+      <button class="reset-btn auth-btn auth-done">Ingresar</button>
+    </div>
+  </section>
+  <script src="./script/login.js"></script>
+</body>
+</html>
