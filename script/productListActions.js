@@ -40,6 +40,20 @@ const onAddProduct = (listId, newProduct) => {
   localStorage.setItem('listArray', JSON.stringify(listCopy));
 }
 
+//delete product from given list
+const onDeleteProduct = (listId, productId) => {
+  const listCopy = onGetListArray();
+  const currentListIndex = listCopy.findIndex(list => list.id === listId);
+  const newList = listCopy[currentListIndex].products.filter(product => product!== productId);
+  listCopy[currentListIndex].products=newList;
+
+  if (currentListIndex === -1) return;
+ 
+  localStorage.setItem('listArray', JSON.stringify(listCopy));
+  
+  
+}
+
 // Get a single list according to nav link
 const onGetSingleList = (id, isCommunity = false, communityLists = null) => {
 

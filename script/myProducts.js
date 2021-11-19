@@ -51,9 +51,32 @@ if (type === 'list') {
 }
 
 
+const renderProductsList = () => {
 
+  console.log("hola")
+  productsContainer.innerHTML = '';
+  
+
+  if (type === 'community') {
+    const dummyProducts = getProductsFromIdList(listProducts)
+    
+    dummyProducts.forEach((product) => {
+      createProductCard(product);
+    })
+  }
+   else if(type === 'list'){
+
+    listProducts = onGetSingleList(currentListId).products;
+    
+    getProductsFromIdList(listProducts).forEach((product) => {
+      createProductCard(product);
+    })
+   }
+
+}
 
 const createProductCard = ({title, description, id, img, rating, price}) => {
+
   const cardProduct = document.createElement('div');
   cardProduct.classList.add('cardProduct');
   cardProduct.innerHTML = `
@@ -74,23 +97,24 @@ const createProductCard = ({title, description, id, img, rating, price}) => {
               <img class="cardProduct__star" src="./images/star.svg">
           </div>
           <p class="cardProduct__price"> $${price} </p>
+          
       </div>
+      <p class="cardProduct__delete"> delete </p>
     </div>
   `;
+
+  
+  
+  const btnDelete = cardProduct.querySelector('.cardProduct__delete');
+  btnDelete.addEventListener('click', () => {
+
+    onDeleteProduct(currentListId,id)
+      renderProductsList();
+    
+    
+  })
   productsContainer.appendChild(cardProduct);
 }
 
-const renderProductsList = () => {
-  productsContainer.innerHTML = '';
-  console.log(listProducts);
 
-  if (type === 'community' || type === 'list') {
-    const dummyProducts = getProductsFromIdList(listProducts)
-    
-    dummyProducts.forEach((product) => {
-      createProductCard(product);
-    })
-  }
-
-}
 renderProductsList();
