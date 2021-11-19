@@ -6,14 +6,14 @@ const total = document.querySelector('.my-products__total').querySelector('span'
 const params = new URLSearchParams(location.search)
 const type = params.get('type');
 const currentListId = params.get('id');
-let listProducts=[];
+let listProducts = [];
 
 btnStart.addEventListener('click', () => {
-  
+
 
   if (type === "list") {
     window.location = `./route.html?listId=${currentListId}`;
-    
+
   }
   else if (type === "community") {
 
@@ -34,7 +34,7 @@ if (type === 'community') {
   addProduct.classList.add('hidden');
   btnStart.innerText = 'Añadir a mis listas'
   const currentCommunityList = onGetSingleList(currentListId, true, comunitylists)
-  myProductsTitle.innerText =  currentCommunityList.name; 
+  myProductsTitle.innerText = currentCommunityList.name;
   if (!currentCommunityList) window.location = './notFound.html';
   listProducts = currentCommunityList.products;
 
@@ -42,11 +42,11 @@ if (type === 'community') {
 
 if (type === 'list') {
 
-   if (!onGetSingleList(currentListId)) window.location = './notFound.html';
+  if (!onGetSingleList(currentListId)) window.location = './notFound.html';
   listProducts = onGetSingleList(currentListId).products;
-  console.log("list products" , listProducts)
+  console.log("list products", listProducts)
   const productsFromData = getProductsFromIdList(listProducts)
-  total.innerText = productsFromData.reduce((acc, val) => acc + val.price,0)
+  total.innerText = productsFromData.reduce((acc, val) => acc + val.price, 0)
   console.log(listProducts);
 }
 
@@ -55,29 +55,32 @@ const renderProductsList = () => {
 
   console.log("hola")
   productsContainer.innerHTML = '';
-  
+
 
   if (type === 'community') {
     const dummyProducts = getProductsFromIdList(listProducts)
-    
+
     dummyProducts.forEach((product) => {
       createProductCard(product);
     })
   }
-   else if(type === 'list'){
+  else if (type === 'list') {
 
     listProducts = onGetSingleList(currentListId).products;
-    
+
     getProductsFromIdList(listProducts).forEach((product) => {
       createProductCard(product);
     })
-   }
+  }
 
 }
 
-const createProductCard = ({title, description, id, img, rating, price}) => {
+const createProductCard = ({ title, description, id, img, rating, price }) => {
 
   const cardProduct = document.createElement('div');
+  const deleteProduct = document.createElement('p');
+  deleteProduct.classList.add("cardProduct__delete");
+  deleteProduct.innerText="eliminar"
   cardProduct.classList.add('cardProduct');
   cardProduct.innerHTML = `
     <div class="cardProduct__container">
@@ -99,20 +102,21 @@ const createProductCard = ({title, description, id, img, rating, price}) => {
           <p class="cardProduct__price"> $${price} </p>
           
       </div>
-      <p class="cardProduct__delete"> delete </p>
     </div>
   `;
 
-  
-  
-  const btnDelete = cardProduct.querySelector('.cardProduct__delete');
-  btnDelete.addEventListener('click', () => {
 
-    onDeleteProduct(currentListId,id)
+  if(type === 'list'){
+
+    cardProduct.appendChild(deleteProduct);
+    deleteProduct.addEventListener('click', () => {
+
+      onDeleteProduct(currentListId, id)
       renderProductsList();
-    
-    
-  })
+    })
+  }
+ 
+  
   productsContainer.appendChild(cardProduct);
 }
 
