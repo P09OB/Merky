@@ -29,15 +29,27 @@ const renderShopProduct = ({title, description, img, price, id, rating}) => {
           </div>
           <p class="cardProduct__price"> $${price} </p>
           <button class="cardProduct--addLink reset-btn add-product-btn">
-              <img src="./images/lista2.svg"></img>
+              <img class="img-add-product" src="./images/lista2.svg"></img>
           </button>
       </div>
     </div>
   `;
-  shopCardProduct.querySelector('.add-product-btn').addEventListener('click', (e) => {
+  const btnAddProduct =shopCardProduct.querySelector('.add-product-btn');
+  btnAddProduct.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(title); 
-    onAddProduct(currentList,id ); 
+    //verifica que el producto no haya sido añadido
+    if(btnAddProduct.classList.contains("product-added")){
+
+      alert("ya lo agregaste")
+    }
+    else{
+
+    console.log(title);
+    btnAddProduct.classList.add("product-added"); 
+    onAddProduct(currentList,id );
+      btnAddProduct.querySelector(".img-add-product").setAttribute("src","./images/tick.svg");
+    }
+     
   });
   categoriesContainer.appendChild(shopCardProduct); 
 }
