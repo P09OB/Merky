@@ -1095,7 +1095,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-image: url("../images/map.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1107,6 +1106,20 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.route-screen__video-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.route-screen__video-container video {
+  width: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -10;
 }
 
 .route-screen .icon-btn {

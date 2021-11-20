@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="./Style/style.css">
 </head>
+
 <body>
   <div class="route-screen">
     <header class="route-screen__system-actions">
@@ -20,6 +22,13 @@
         <img src="./images/listRoute.svg" alt="">
       </button>
     </header>
+
+    <div class="route-screen__video-container">
+      <video autoplay muted loop>
+        <source src="./video/pathVideo.mp4" type="video/mp4" />
+      </video>
+    </div>
+
     <footer class="route-screen__main-actions">
       <button class="reset-btn arrow-drop">
         <img src="./images/arrow-drop.svg" alt="arrow">
@@ -36,6 +45,8 @@
   <script src="./script/cardInteraction.js"></script>
   <script src="./script/dummy_data.js"></script>
   <script src="./script/productListActions.js"></script>
+  <script src="./script/routeMap.js"></script>
   <script src="./script/route.js"></script>
 </body>
+
 </html>
