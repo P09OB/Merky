@@ -62,11 +62,7 @@ const renderSlides = async () => {
   DUMMY_DATA.forEach((slide, index) => {
     const currentSlide = createSlide(slide);
     sliderContainer.appendChild(currentSlide);
-<<<<<<< HEAD
-   
 
-=======
->>>>>>> fa4cf7f8d8d658bc47f35a222abde14dec718995
     const slideImage = currentSlide.querySelector('img')
     // disable default image drag
     slideImage.addEventListener('dragstart', (e) => e.preventDefault())
