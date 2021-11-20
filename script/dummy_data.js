@@ -73,7 +73,7 @@ const products = [
         description: "las vende el pibe", 
         id: 0, 
         img: "https://colsubsidio.vteximg.com.br/arquivos/ids/166452-1200-1200/7702189053770.jpg?v=637299796871330000", 
-        rating: 5, 
+        rating: 3.5, 
         price: 4000,
 
     },
@@ -83,7 +83,7 @@ const products = [
         description: "Papa Margarita Crema y Cebolla x 110 gr", 
         id: 1, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/07/23142245/7702189056719.jpg", 
-        rating: 4, 
+        rating: 2.4, 
         price: 3960,
 
     }
@@ -93,7 +93,7 @@ const products = [
         description: "Atun Vancams Lomito Aceite x 160 gr", 
         id: 2, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/09/02133732/7702367002613.jpg", 
-        rating: 4, 
+        rating: 3.5, 
         price: 6900,
 
     }
@@ -113,7 +113,7 @@ const products = [
         description: "Avena Alpina x 1000 ml", 
         id: 4, 
         img: "https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/05/31150032/7702001086498.jpg", 
-        rating: 5, 
+        rating: 4.5, 
         price: 3050,
 
     }

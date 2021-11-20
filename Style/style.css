@@ -563,6 +563,7 @@ body {
           box-shadow: var(--box-shadow);
   position: relative;
   margin: 0 !important;
+  position: relative;
 }
 
 .cardProduct__container {
@@ -613,6 +614,9 @@ body {
 }
 
 .cardProduct__delete {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
   margin-left: auto;
   margin-top: auto;
   color: var(--main-color);

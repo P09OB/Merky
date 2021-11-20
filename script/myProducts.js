@@ -76,7 +76,7 @@ const renderProductsList = () => {
 }
 
 const createProductCard = ({ title, description, id, img, rating, price }) => {
-
+  const starsArray = starsMath(rating); 
   const cardProduct = document.createElement('div');
   const deleteProduct = document.createElement('p');
   deleteProduct.classList.add("cardProduct__delete");
@@ -93,11 +93,11 @@ const createProductCard = ({ title, description, id, img, rating, price }) => {
               <p class="cardProduct__weight"> 500g </p>
           </div>
           <div class="cardProduct__starContainer">
-              <img class="cardProduct__star" src="./images/star.svg">
-              <img class="cardProduct__star" src="./images/star.svg">
-              <img class="cardProduct__star" src="./images/star.svg">
-              <img class="cardProduct__star" src="./images/star.svg">
-              <img class="cardProduct__star" src="./images/star.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[0]}.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[1]}.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[2]}.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[3]}.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[4]}.svg">
           </div>
           <p class="cardProduct__price"> $${price} </p>
           

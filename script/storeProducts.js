@@ -5,7 +5,8 @@ const currentList = params.get('listId');
 
 console.log(onGetSingleList(currentList));
 
-const renderShopProduct = ({title, description, img, price, id}) => {
+const renderShopProduct = ({title, description, img, price, id, rating}) => {
+  const starsArray = starsMath(rating); 
   const shopCardProduct = document.createElement('a');
   shopCardProduct.setAttribute('href', `./productDetail.html?id=${id}`)
   shopCardProduct.classList.add('cardProduct');
@@ -20,11 +21,11 @@ const renderShopProduct = ({title, description, img, price, id}) => {
               <p class="cardProduct__weight"> 350ml </p>
           </div>
           <div class="cardProduct__starContainer">
-              <img class="cardProduct__star" src="./images/star.svg">
-              <img class="cardProduct__star" src="./images/star.svg">
-              <img class="cardProduct__star" src="./images/star.svg">
-              <img class="cardProduct__star" src="./images/star.svg">
-              <img class="cardProduct__star" src="./images/star.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[0]}.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[1]}.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[2]}.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[3]}.svg">
+              <img class="cardProduct__star" src="./images/star-${starsArray[4]}.svg">
           </div>
           <p class="cardProduct__price"> ${price} </p>
           <button class="cardProduct--addLink reset-btn add-product-btn">

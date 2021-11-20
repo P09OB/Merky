@@ -5,6 +5,8 @@
     box-shadow: var(--box-shadow);
     position: relative;
     margin: 0 !important; 
+    position: relative;
+    
     &__container {
         padding: 10px;
         display: flex;
@@ -44,7 +46,9 @@
         color: var(--second-color);
     }
     &__delete{
-
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
         margin-left:auto;
         margin-top: auto;
         color: var(--main-color);
