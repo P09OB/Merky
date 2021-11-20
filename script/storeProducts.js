@@ -40,19 +40,24 @@ const renderShopProduct = ({title, description, img, price, id, rating}) => {
     //verifica que el producto no haya sido añadido
     if(btnAddProduct.classList.contains("product-added")){
 
-      alert("ya lo agregaste")
+      showToast("producto ya ha sido añadido");
     }
     else{
 
     console.log(title);
     btnAddProduct.classList.add("product-added"); 
     onAddProduct(currentList,id );
+    showToast("producto añadido");
       btnAddProduct.querySelector(".img-add-product").setAttribute("src","./images/tick.svg");
+
+      
     }
      
   });
   categoriesContainer.appendChild(shopCardProduct); 
 }
+
+
 
 products.forEach(p => {
   renderShopProduct(p); 

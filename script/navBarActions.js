@@ -34,3 +34,14 @@ switch (currenScreen) {
         break;
 
 }
+
+const showToast=(message) => {
+
+    const toast =document.querySelector('.toast');
+    toast.innerHTML=message;
+    toast.style.display="block"
+  
+    setTimeout(function() {
+      toast.style.display="none"
+    }, 2000);
+  }
