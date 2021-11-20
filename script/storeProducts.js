@@ -27,7 +27,7 @@ const renderShopProduct = ({title, description, img, price, id, rating}) => {
               <img class="cardProduct__star" src="./images/star-${starsArray[3]}.svg">
               <img class="cardProduct__star" src="./images/star-${starsArray[4]}.svg">
           </div>
-          <p class="cardProduct__price"> ${price} </p>
+          <p class="cardProduct__price"> $${price} </p>
           <button class="cardProduct--addLink reset-btn add-product-btn">
               <img src="./images/lista2.svg"></img>
           </button>
