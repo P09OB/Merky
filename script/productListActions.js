@@ -10,9 +10,16 @@ const onGetListArray = () => {
 
 // Add list to array of list 
 const onAddList = (name) => {
+
+  const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+  const d = new Date();
+  const day =d.getDate();
+  const month = months[d.getMonth()];
+
   const newItem = {
     id: Math.random().toString(),
     name: name,
+    date: day +" "+month,
     products: [],
   }
   localStorage.setItem('listArray', JSON.stringify([...JSON.parse(localStorage.getItem('listArray')), newItem]));
@@ -25,6 +32,14 @@ const onDuplicateList = (id) => {
     return list.id == id 
   
   });
+
+  const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+  const d = new Date();
+  const day =d.getDate();
+  const month = months[d.getMonth()];
+
+  mylist.id=Math.random().toString();
+  mylist.date=day +" "+month,
 
   localStorage.setItem('listArray', JSON.stringify([...JSON.parse(localStorage.getItem('listArray')), mylist]));
 }

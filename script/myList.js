@@ -6,7 +6,7 @@ const createListBtn = document.querySelector('.create-list-btn');
 const listNameInput = document.querySelector('.list-name');
 console.log(onGetListArray());
 
-const handleCreateLIst = ({name, id}) => {
+const handleCreateLIst = ({name, id,date}) => {
 
   const card = document.createElement('a');
   card.classList.add('card');
@@ -15,7 +15,7 @@ const handleCreateLIst = ({name, id}) => {
     <div class="card__list">
         <span for="list">${name}</span>
         <p>
-            Nov.24
+            ${date}
         </p>
     </div>
   </a>

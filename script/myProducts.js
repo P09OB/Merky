@@ -18,6 +18,7 @@ btnStart.addEventListener('click', () => {
   else if (type === "community") {
 
     onDuplicateList(parseInt(currentListId));
+    showToast("lista duplicada")
   }
 
 });
