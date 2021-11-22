@@ -25,13 +25,3 @@ starsArray.forEach(star => {
 });
 
 console.log(detailPrice);
-
-
-/**
- * 
- * <img class="cardProduct__star" src="./images/star.svg">
-            <img class="cardProduct__star" src="./images/star.svg">
-            <img class="cardProduct__star" src="./images/star.svg">
-            <img class="cardProduct__star" src="./images/star.svg">
-            <img class="cardProduct__star" src="./images/star.svg">
- */

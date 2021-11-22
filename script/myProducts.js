@@ -38,28 +38,26 @@ if (type === 'community') {
   myProductsTitle.innerText = currentCommunityList.name;
   if (!currentCommunityList) window.location = './notFound.html';
   listProducts = currentCommunityList.products;
-
+  
 }
 
 if (type === 'list') {
-
   if (!onGetSingleList(currentListId)) window.location = './notFound.html';
   listProducts = onGetSingleList(currentListId).products;
-  console.log("list products", listProducts)
+  if(listProducts.length === 0) btnStart.classList.add('hidden'); 
+  myProductsTitle.innerText = onGetSingleList(currentListId).name;
   const productsFromData = getProductsFromIdList(listProducts)
   total.innerText = productsFromData.reduce((acc, val) => acc + val.price, 0)
-  console.log(listProducts);
 }
 
 
 const renderProductsList = () => {
-
-  console.log("hola")
+  
   productsContainer.innerHTML = '';
 
 
   if (type === 'community') {
-    const dummyProducts = getProductsFromIdList(listProducts)
+    const dummyProducts = getProductsFromIdList(listProducts); 
 
     dummyProducts.forEach((product) => {
       createProductCard(product);
@@ -68,9 +66,11 @@ const renderProductsList = () => {
   else if (type === 'list') {
 
     listProducts = onGetSingleList(currentListId).products;
-
+    console.log(listProducts.length);
+    if(listProducts.length === 0) btnStart.classList.add('hidden');
+    
     getProductsFromIdList(listProducts).forEach((product) => {
-      createProductCard(product);
+    createProductCard(product);
     })
   }
 
@@ -111,8 +111,8 @@ const createProductCard = ({ title, description, id, img, rating, price }) => {
 
     cardProduct.appendChild(deleteProduct);
     deleteProduct.addEventListener('click', () => {
-
-      onDeleteProduct(currentListId, id)
+      onDeleteProduct(currentListId, id);
+      
       renderProductsList();
     })
   }
