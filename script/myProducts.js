@@ -68,7 +68,7 @@ const renderProductsList = () => {
     listProducts = onGetSingleList(currentListId).products;
     console.log(listProducts.length);
     if(listProducts.length === 0) btnStart.classList.add('hidden');
-    
+    total.innerText = getProductsFromIdList(listProducts).reduce((acc, val) => acc + val.price, 0)
     getProductsFromIdList(listProducts).forEach((product) => {
     createProductCard(product);
     })

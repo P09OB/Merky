@@ -50,7 +50,7 @@ const createSlide = ({title, img}) => {
     const activeProductsLength = activeProducts.length; 
     const dummyProductsLength = DUMMY_DATA.length; 
     progressBar.style.width = `${(activeProductsLength / dummyProductsLength)*100 }%`;
-    if(activeProductsLength === dummyProductsLength) window.location = './doneRoute.html'
+    if(activeProductsLength === dummyProductsLength) window.location = `./doneRoute.html?listId=${currentListId}`
   })
   return slide;
 }

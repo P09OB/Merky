@@ -614,12 +614,13 @@ body {
 }
 
 .cardProduct__delete {
+  font-family: Nunito;
   position: absolute;
   right: 1em;
-  bottom: 1em;
+  bottom: .5em;
   margin-left: auto;
   margin-top: auto;
-  color: var(--main-color);
+  color: gray;
   text-decoration: underline;
 }
 
