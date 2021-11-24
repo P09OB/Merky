@@ -1,9 +1,10 @@
+const listBtn = document.querySelector('.list-btn-nav');
 const categoriesContainer = document.querySelector('.categoriesContainer');
 
 const params = new URLSearchParams(location.search)
 const currentList = params.get('listId');
 
-console.log(onGetSingleList(currentList));
+listBtn.addEventListener('click', () => window.location = './list.html?screen=lists')
 
 const renderShopProduct = ({title, description, img, price, id, rating}) => {
   const starsArray = starsMath(rating); 
