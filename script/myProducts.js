@@ -3,7 +3,8 @@ const btnStart = document.querySelector('.start-route')
 const addProduct = document.querySelector('.cardNewProduct');
 const myProductsTitle = document.querySelector('.my-products__title');
 const total = document.querySelector('.my-products__total').querySelector('span');
-const params = new URLSearchParams(location.search)
+const params = new URLSearchParams(location.search);
+const modalDeleteProduct = document.querySelector('.delete-product-container');
 const type = params.get('type');
 const currentListId = params.get('id');
 let listProducts = [];
@@ -111,9 +112,26 @@ const createProductCard = ({ title, description, id, img, rating, price }) => {
 
     cardProduct.appendChild(deleteProduct);
     deleteProduct.addEventListener('click', () => {
-      onDeleteProduct(currentListId, id);
+
+      modalDeleteProduct.classList.remove("hidden");
+
+      const cancelbtn =modalDeleteProduct.querySelector(".cancel-delete-btn");
+      const btnDelete =modalDeleteProduct.querySelector(".delete-product-btn");
+
+      btnDelete.addEventListener('click', () => {
+
+        onDeleteProduct(currentListId, id);
+        modalDeleteProduct.classList.add("hidden");
+        renderProductsList();
+      });
+
+      cancelbtn.addEventListener('click', ()=>{
+
+        modalDeleteProduct.classList.add("hidden");
+      })
       
-      renderProductsList();
+      
+      
     })
   }
  

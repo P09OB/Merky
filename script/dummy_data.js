@@ -214,8 +214,7 @@ const comunitylists = [{
     id: "25",
     name: "Desayunos saludables",
     userId: 8,
-    products: [8, 5,3,15
-    ]
+    products: [8, 5,3,15]
 }
 
 

@@ -1508,6 +1508,74 @@ header p strong {
   padding: 1em;
 }
 
+.delete-product-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(33, 28, 112, 0.25);
+}
+
+.hidden {
+  display: none;
+}
+
+.delete-product {
+  font-family: Nunito;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70vw;
+  background-color: white;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+  overflow: hidden;
+}
+
+.delete-product h1 {
+  color: var(--second-color);
+  text-align: center;
+  font-size: 24px;
+}
+
+.delete-product span {
+  color: var(--main-color);
+}
+
+.delete-product-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1em;
+}
+
+.delete-product-actions button {
+  padding: 0.5em;
+  border-radius: 8px;
+  width: 40%;
+}
+
+.delete-product-actions .cancel-delete-btn {
+  background-color: transparent;
+}
+
+.delete-product-actions .delete-product-btn {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
 .chooseMarket {
   width: 375px;
   height: 812px;

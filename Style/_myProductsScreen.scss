@@ -1,7 +1,7 @@
-header{
+header {
   display: flex;
   justify-content: space-between;
-  padding: 1.5em 1em; 
+  padding: 1.5em 1em;
   h1 {
     font-size: 18px;
     font-family: "Nunito";
@@ -9,7 +9,7 @@ header{
     font-weight: bold;
     text-align: center;
     color: var(--second-color);
-    
+
     padding: 0;
   }
   p {
@@ -28,51 +28,108 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  gap: 1em; 
+
+  gap: 1em;
   // background-color: red;
-  height: 80%; 
+  height: 80%;
   padding-bottom: 1300px;
   overflow-y: auto;
-  
-
-  .cardProduct {
-  }
-  .cardNewProduct {
-  }
 }
 
-.my-products-body{
+.my-products-body {
   display: flex;
   flex-direction: column;
-  height: 100vh; 
+  height: 100vh;
   overflow: hidden;
   // background-color: blue;
 }
 
-.my-products-header{
+.my-products-header {
   // flex-grow: 1;
-  height: 30% ; 
+  height: 30%;
   // background-color: yellow;
   margin-bottom: 1em;
 }
 
-.navBar__container { 
+.navBar__container {
   position: fixed;
   left: 50%;
   bottom: 0px;
   transform: translate(-50%, -29%);
-  width: 100%; 
-  padding: 0 1em; 
+  width: 100%;
+  padding: 0 1em;
   height: fit-content;
 }
 
-.products-footer{
+.products-footer {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  .button{
-    width: 100% !important; 
+  .button {
+    width: 100% !important;
     padding: 1em;
+  }
+}
+.delete-product-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(33, 28, 112, 0.25);
+}
+
+.hidden {
+  display: none;
+}
+.delete-product {
+  font-family: Nunito;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  overflow: hidden;
+
+  h1{
+    color: var(--second-color);
+    text-align: center;
+    font-size: 24px;
+  }
+  span{
+
+    color: var(--main-color);
+  }
+  
+}
+
+.delete-product-actions{
+
+  display: flex;
+  justify-content:space-around;
+  
+  padding: 1em;
+
+  button{
+
+    padding: 0.5em;
+    border-radius:8px;
+    width:40%;
+  }
+  .cancel-delete-btn{
+
+    background-color:transparent;
+    
+  }
+
+  .delete-product-btn{
+
+    background-color: var(--main-color);
+    color:#fff;
   }
 }
